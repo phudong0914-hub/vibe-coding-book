@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+
+<!--_5eshUguMmNyeE3CMEui3--><html class="__variable_749080 __variable_a9b986" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link as="font" crossorigin="" href="../../_next/static/media/00f4982f357db61e-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/167e329a59dea0bd-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/19008abd0e063b4a-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/2173e4bb28c315da-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/25ab8995c98996d7-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/28fd122d5a25bf39-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/8201559e247ad180-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/a4f5b89dac3239e3-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/cd79e1ff94fa521b-s.p.woff2" rel="preload" type="font/woff2"/><link as="font" crossorigin="" href="../../_next/static/media/e11f95d95ac59fa4-s.p.woff2" rel="preload" type="font/woff2"/><link data-precedence="next" href="../../_next/static/css/77f36fb05ce06f59.css" rel="stylesheet"/><link data-precedence="next" href="../../_next/static/css/82899afa782e69ac.css" rel="stylesheet"/><link data-precedence="next" href="../../_next/static/css/98e0d5cdcb08e5db.css" rel="stylesheet"/><link as="script" fetchpriority="low" href="../../_next/static/chunks/webpack-fa94c6a3866cc1e0.js" rel="preload"/><meta content="" name="next-size-adjust"/><title>AI đọc từng mảnh, không đọc nguyên từ · Trungvt.co</title><meta content="Hiểu cách AI hoạt động, giao việc cho đúng và kiểm chứng kết quả. Không cần biết lập trình, không cần giỏi toán." name="description"/><link href="../../index.html" rel="author"/><meta content="Trungvt" name="author"/><meta content="Trungvt.co" property="og:title"/><meta content="Hiểu cách AI hoạt động, giao việc cho đúng và kiểm chứng kết quả. Không cần biết lập trình, không cần giỏi toán." property="og:description"/><meta content="Trungvt.co" property="og:site_name"/><meta content="vi_VN" property="og:locale"/><meta content="../../og-v2.png" property="og:image"/><meta content="website" property="og:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="Trungvt.co" name="twitter:title"/><meta content="Hiểu cách AI hoạt động, giao việc cho đúng và kiểm chứng kết quả. Không cần biết lập trình, không cần giỏi toán." name="twitter:description"/><meta content="../../og-v2.png" name="twitter:image"/><link href="../../favicon.ico" rel="icon" sizes="16x16" type="image/x-icon"/><link href="../../icon.svg" rel="icon" sizes="any" type="image/svg+xml"/><link href="../../apple-icon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/><script>(function(){try{if(!location.pathname.startsWith('/sach/'))return;var t=localStorage.getItem('reader-theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script><script data-domains="Trungvt.co" data-website-id="082ae946-82c3-4fc4-a7df-5428af3cc0a6" defer="" src="https://cloud.umami.is/script.js"></script>
+
+
+<style id="custom-cursor-style">
+  #custom-cursor-dot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background-color: #ff6200;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+  }
+  #custom-cursor-follower {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid #ff6200;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease-out, width 0.2s, height 0.2s, background-color 0.2s;
+  }
+  body.cursor-hover #custom-cursor-dot {
+    background-color: #ff6200;
+    width: 4px;
+    height: 4px;
+  }
+  body.cursor-hover #custom-cursor-follower {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 98, 0, 0.15);
+    border-color: #ff6200;
+  }
+  @media (min-width: 1025px) {
+    body, a, button, select, input, textarea, [role="button"], .reader_tocTrigger__kx6Zs, .reader_darkToggle__fe_JD, .reader_railSection__fR9f4, .reader_chapterLink__oN1gG {
+      cursor: default !important;
+    }
+  }
+</style>
+<style id="app-logo-style">
+  .app_logo_glow_wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background: radial-gradient(circle, #ffc800 0%, #e69500 100%);
+    box-shadow: 0 0 10px rgba(255, 195, 0, 0.9), 0 0 20px rgba(255, 140, 0, 0.7);
+    animation: appLogoPulse 2.5s ease-in-out infinite alternate;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .app_logo_glow_wrapper:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 16px rgba(255, 220, 0, 1), 0 0 32px rgba(255, 140, 0, 0.9);
+  }
+  .app_logo_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  @keyframes appLogoPulse {
+    0% {
+      box-shadow: 0 0 8px rgba(255, 195, 0, 0.75), 0 0 16px rgba(255, 140, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(255, 220, 0, 1), 0 0 36px rgba(255, 140, 0, 0.9);
+    }
+  }
+</style>
+<link rel="stylesheet" href="../../lesson-tree-modal.css"/></head><body><div hidden=""><!--$--><!--/$--></div><a class="skip-link" href="index.html">Bỏ qua đến nội dung chính</a><header class="reader_chrome__8u7tr"><div aria-hidden="true" class="reader_progressTrack__zxFcP"><div class="reader_progressFill__R1ihK" style="width:0%"></div></div><div class="reader_bar__cNzco"><button aria-expanded="false" class="reader_tocTrigger__kx6Zs" type="button"><svg aria-hidden="true" height="12" viewbox="0 0 14 12" width="14"><path d="M1 2H13M1 6H13M1 10H8" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path></svg></button><a class="reader_brand__Ehqd8" href="../../index.html"><div class="app_logo_glow_wrapper"><img src="../../app-logo-glowing-red.png" class="app_logo_img" alt="App Logo" /></div><span class="Logo_lockup__DjkOB Logo_md__qpqSF"><span class="Logo_learning__zJhMj">Trung</span><span class="Logo_ai__6l5Xv">vt</span><span class="Logo_vn__foqO1">co</span></span></a><div class="reader_controls__hctoR"><button aria-label="Chế độ đọc tối" aria-pressed="false" class="reader_darkToggle__fe_JD" type="button"><svg aria-hidden="true" height="15" viewbox="0 0 15 15" width="15"><path d="M13 8.5A5.7 5.7 0 016.5 2 5.7 5.7 0 1013 8.5Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.4"></path></svg></button><span class="reader_lang__8e9aC"><div class="LangToggle_root__d78WC"><div class="LangToggle_segment__nww1d"><span aria-current="true" class="LangToggle_vi___bcHH">VI</span><button aria-expanded="false" class="LangToggle_en__Ld3Yf" type="button">EN</button></div></div></span></div></div></header><main id="main" tabindex="-1"><div class="reader_grid__jzzrU"><aside class="reader_sidebar__2G6R_"><nav aria-label="Mục lục"><div class="reader_tocLabel__h6p9x">MỤC LỤC</div><div class="reader_frontMatter__nmKA0"><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../loi-mo-dau/index.html">Lời mở đầu</a></li></ul></div><div class="reader_partsList__e1Czf"><div class="reader_currentPart__fMozg"><div class="reader_partEyebrow__bQd8Z">PHẦN 1</div><div class="reader_partTitle__ePRCI">Bên trong AI thật ra diễn ra điều gì</div><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi reader_chapterRowCurrent__kTS9Z"><span aria-current="page">1. AI đọc từng mảnh, không đọc nguyên từ</span></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-2/index.html">2. AI tạo câu trả lời bằng cách đoán mảnh tiếp theo</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-3/index.html">3. Vì sao AI biết trả lời như một trợ lý</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-4/index.html">4. Vì sao hỏi cùng một câu vẫn có thể nhận câu trả lời khác</a></li></ul></div><details class="reader_part__EHwMp"><summary class="reader_partSummary__IEOOi"><span>Phần 2. Chủ động giao việc cho AI</span><svg aria-hidden="true" class="reader_chevron__vArxo" height="12" viewbox="0 0 14 14" width="12"><path d="M2 5L7 10L12 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></summary><div class="reader_partBody__B1Sz4"><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-5/index.html">5. Đừng chỉ mô tả, hãy cho AI xem ví dụ</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-6/index.html">6. Biến một lời giải tốt thành công thức dùng lại</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-7/index.html">7. Để AI hỏi lại và lập kế hoạch trước khi làm</a></li></ul></div></details><details class="reader_part__EHwMp"><summary class="reader_partSummary__IEOOi"><span>Phần 3. Ngữ cảnh: AI chỉ biết những gì đang nằm trước mặt</span><svg aria-hidden="true" class="reader_chevron__vArxo" height="12" viewbox="0 0 14 14" width="12"><path d="M2 5L7 10L12 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></summary><div class="reader_partBody__B1Sz4"><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-8/index.html">8. AI "nhớ" bằng cửa sổ ngữ cảnh</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-9/index.html">9. Prompt quá dài làm AI dễ bỏ sót phần quan trọng</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-10/index.html">10. Khi đoạn chat rối: tóm tắt, làm lại, rồi cải thiện từng vòng</a></li></ul></div></details><details class="reader_part__EHwMp"><summary class="reader_partSummary__IEOOi"><span>Phần 4. Khi AI biết dùng công cụ và biết chia việc</span><svg aria-hidden="true" class="reader_chevron__vArxo" height="12" viewbox="0 0 14 14" width="12"><path d="M2 5L7 10L12 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></summary><div class="reader_partBody__B1Sz4"><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-11/index.html">11. Khi chatbot biết dùng công cụ</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-12/index.html">12. Chia việc lớn thành nhiều việc nhỏ cho AI</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-13/index.html">13. Chọn công cụ đúng cho việc đang làm</a></li></ul></div></details><details class="reader_part__EHwMp"><summary class="reader_partSummary__IEOOi"><span>Phần 5. Khi AI trả lời sai mà vẫn nghe rất thuyết phục</span><svg aria-hidden="true" class="reader_chevron__vArxo" height="12" viewbox="0 0 14 14" width="12"><path d="M2 5L7 10L12 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></summary><div class="reader_partBody__B1Sz4"><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-14/index.html">14. Vì sao AI có thể nói sai rất tự tin</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-15/index.html">15. Khi AI quá dễ đồng ý với bạn</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-16/index.html">16. Bạn càng hiểu biết, AI càng hữu ích</a></li></ul></div></details><details class="reader_part__EHwMp"><summary class="reader_partSummary__IEOOi"><span>Phần 6. Cách đánh giá AI và những gì AI đang định hình</span><svg aria-hidden="true" class="reader_chevron__vArxo" height="12" viewbox="0 0 14 14" width="12"><path d="M2 5L7 10L12 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></summary><div class="reader_partBody__B1Sz4"><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-17/index.html">17. Muốn biết AI có hợp với bạn, hãy tự kiểm tra</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-18/index.html">18. AI không hoàn toàn trung lập</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../chuong-19/index.html">19. Dòng tin đang thu hẹp góc nhìn của bạn như thế nào</a></li></ul></div></details></div><div class="reader_backMatter__766L4"><ul class="reader_chapterList__G8YDb"><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../thuat-ngu/index.html">Thuật ngữ cần biết</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../nguon-doc-them/index.html">Nguồn đọc thêm</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../tai-lieu-tham-khao/index.html">Tài liệu tham khảo</a></li><li class="reader_chapterRow__68lhi"><a class="reader_chapterLink__oN1gG" href="../thuat-ngu/index.html#kho-ma-nguon-mo" id="tab-kho-ma-nguon"><span style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#00f2fe;"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>Kho mã nguồn mở sưu tầm</span></a></li></ul></div></nav></aside><div class="reader_content__OmUeG"><article class="reader_article__zUon_"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Chapter","name":"AI đọc từng mảnh, không đọc nguyên từ","position":1,"url":"https://Trungvt.co/sach/chuong-1","inLanguage":"vi","isAccessibleForFree":true,"isPartOf":{"@type":"Book","name":"Hiểu AI để dùng cho đúng","url":"https://Trungvt.co/sach"}}</script>
+<div class="readerBody_eyebrow__sSv8T">Phần 1 · Chương 1</div>
+<h1 class="readerBody_title__IEeSs">AI đọc từng mảnh, không đọc nguyên từ</h1>
+<div class="readerBody_readingTime__KY4Lh">Thời gian đọc: 11 phút</div>
+<h2 class="readerBody_subhead__fsVE_" data-reader-heading="true" id="ai-khong-doc-cong-van-cua-ban-nhu-ban-nghi">⚡ AI không đọc công văn của bạn như bạn nghĩ</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Bạn gõ một đoạn văn bản vào chatbot — có thể là công văn, báo cáo, hay một đoạn hợp đồng. Bạn nghĩ AI đang "đọc" nó, từng chữ một, giống như đồng nghiệp bạn đọc qua vai bạn. <strong>Sai.</strong></span></p>
+<p class="readerBody_paragraph__yI4m6"><span>Trước khi một chữ nào của bạn chạm tới mô hình, nó đã bị băm nhỏ thành từng mảnh gọi là <strong>token</strong>. Mô hình không nhìn thấy chữ "Nguyễn" như bạn nhìn thấy. Nó nhìn thấy vài mảnh vụn được dán lại — và đôi khi, việc dán đó không hoàn hảo.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>Đây không phải chi tiết kỹ thuật để bỏ qua. Đây là lý do:</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>- 💸 Bạn trả tiền nhiều hơn khi làm việc bằng tiếng Việt</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>- 🧠 AI "quên" phần giữa tài liệu dài của bạn</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>- ❌ AI đôi khi đếm sai, đánh vần sai chính những cái tên quen thuộc</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>Hiểu chương này, bạn sẽ biết vì sao — và biết cách né.</span></p>
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+<h2 class="readerBody_subhead__fsVE_" data-reader-heading="true" id="cau-chu-cua-ban-bi-cat-thanh-lego-truoc-khi-ai-nhin-thay">🧩 1. Câu chữ của bạn bị cắt thành LEGO trước khi AI nhìn thấy</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Hãy tưởng tượng bạn đưa cho ai đó một bộ LEGO thay vì một câu nguyên vẹn. Từ quen — như "nhà", "ăn" — được ráp sẵn thành một viên gạch nguyên khối. Từ lạ, từ dài, tên riêng ít gặp thì bị vỡ ra thành nhiều mảnh nhỏ.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span><strong>Cơ chế đứng sau gọi là Byte Pair Encoding (BPE):</strong> hệ thống quét qua núi văn bản khổng lồ, tìm cặp ký tự nào hay đứng cạnh nhau nhất, rồi dán chúng lại thành một mảnh. Lặp lại hàng nghìn lần. Kết quả: <strong>từ nào xuất hiện càng nhiều trong dữ liệu huấn luyện, càng dễ được gộp gọn thành một khối duy nhất.</strong> Từ hiếm, từ tiếng Việt có dấu, tên người Việt — thường bị vỡ vụn.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>Không ai "cố tình" thiên vị. Đó thuần là thống kê. Nhưng hậu quả thì bạn phải gánh trực tiếp.</span></p>
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+<h2 class="readerBody_subhead__fsVE_" data-reader-heading="true" id="bang-chung-ban-co-the-tu-kiem-tra-trong-30-giay">🔍 2. Bằng chứng bạn có thể tự kiểm tra trong 30 giây</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Thử ngay: yêu cầu AI đánh vần ngược họ <strong>"Nguyễn"</strong>, từng chữ một.</span></p>
+<div class="readerBody_comparison__wDt7v">
+<div class="readerBody_comparisonLead__2Ln3d"><em>Cùng một yêu cầu, hai mô hình (kết quả của bạn có thể khác mỗi lần):</em></div>
+<div class="readerBody_turns__uQXml">
+<div class="readerBody_promptBox__ZKdZz">
+<div class="readerBody_promptLabel__U_XUP">PROMPT</div>
+<div class="readerBody_promptText__YVa7Y">Hãy đánh vần ngược từ 'Nguyễn', từng chữ cái một, từ chữ cuối đến chữ đầu.</div>
+</div>
+<div class="readerBody_reply__himOM">
+<div class="readerBody_replyHead___Vpre">
+<span class="readerBody_replyModel__MoQFJ">gpt-4.1-mini</span>
+</div>
+<div aria-label="Câu trả lời: gpt-4.1-mini" class="readerBody_replyScroll__zOiTT" role="region" tabindex="0">
+<div class="readerBody_replyText__n79zG">
+<p>"Từ 'Nguyễn' được đánh vần ngược là: n – ê – y – ễ – u – N."</p>
+</div>
+</div>
+<div class="readerBody_replyNote__zQ96D">sai; đúng ra phải là n, ễ, y, u, g, N</div>
+</div>
+<div class="readerBody_reply__himOM">
+<div class="readerBody_replyHead___Vpre">
+<span class="readerBody_replyModel__MoQFJ">gpt-5.5</span>
+</div>
+<div aria-label="Câu trả lời: gpt-5.5" class="readerBody_replyScroll__zOiTT" role="region" tabindex="0">
+<div class="readerBody_replyText__n79zG">
+<p>n, ễ, y, u, g, N</p>
+</div>
+</div>
+<div class="readerBody_replyNote__zQ96D">đúng</div>
+</div>
+</div>
+</div>
+<p class="readerBody_paragraph__yI4m6"><span>Cùng một câu lệnh, cùng một cái họ quen thuộc với mọi người Việt — hai kết quả trái ngược. Khác biệt duy nhất: bạn chọn mô hình nào.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span><strong>Bài học thực chiến:</strong> việc cần đúng từng ký tự (mã hồ sơ, số hợp đồng, tên riêng dễ nhầm) — đừng giao cho mô hình rẻ nhất, nhanh nhất. Chọn mô hình mạnh, hoặc tự kiểm tra lại bằng mắt.</span></p>
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+<h2 class="readerBody_subhead__fsVE_" data-reader-heading="true" id="vi-sao-lam-viec-bang-tieng-viet-ton-tien-hon-tieng-anh">💰 3. Vì sao làm việc bằng tiếng Việt tốn tiền hơn tiếng Anh</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Bạn bị tính phí theo <strong>số token</strong>, không phải số từ, số câu.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>So sánh cùng một ý, cùng 7 từ:</span></p>
+<figure class="readerBody_figure___MfWC">
+<div class="readerBody_figureFrame__wub8X">
+<div class="figures_fig01b__1x0TB">
+<div class="figures_langBlock__p6qa_">
+<div class="figures_langHead__4wIC7">
+<span class="figures_langName__N8_Ls">Tiếng Việt</span>
+<span class="figures_langWords__7yQF2">7 từ</span>
+<span class="figures_langCountHi__Om5UU">10 token</span>
+</div>
+<div class="figures_chipRow__dr3Is">
+<span class="figures_brick__etGln">C</span>
+<span class="figures_brick__etGln">ảm</span>
+<span class="figures_brick__etGln figures_chipSpace__BFQ_O">·</span>
+<span class="figures_brick__etGln">ơn</span>
+<span class="figures_brick__etGln">bạn</span>
+<span class="figures_brick__etGln">đã</span>
+<span class="figures_brick__etGln">giúp</span>
+<span class="figures_brick__etGln">đ</span>
+<span class="figures_brick__etGln">ỡ</span>
+<span class="figures_brick__etGln">tôi</span>
+</div>
+</div>
+<div class="figures_langBlock__p6qa_">
+<div class="figures_langHead__4wIC7">
+<span class="figures_langName__N8_Ls">Tiếng Anh</span>
+<span class="figures_langWords__7yQF2">7 từ</span>
+<span class="figures_langCountLo__BdxT4">7 token</span>
+</div>
+<div class="figures_chipRow__dr3Is">
+<span class="figures_brick__etGln">Thank</span>
+<span class="figures_brick__etGln">you</span>
+<span class="figures_brick__etGln">so</span>
+<span class="figures_brick__etGln">much</span>
+<span class="figures_brick__etGln">for</span>
+<span class="figures_brick__etGln">helping</span>
+<span class="figures_brick__etGln">me</span>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="readerBody_figcaption__ZAs3y">Trong ví dụ này, hai câu cùng nghĩa và cùng dài 7 từ, nhưng câu tiếng Việt bị tách thành 10 token, còn câu tiếng Anh chỉ có 7 token. Dấu chấm là token biểu thị dấu cách. Vì chi phí thường tính theo token, cùng một ý có thể tốn khác nhau tùy ngôn ngữ.</figcaption>
+</figure>
+<p class="readerBody_paragraph__yI4m6"><span>Cùng một lời cảm ơn — bản tiếng Việt tốn nhiều hơn gần <strong>50% token</strong>. Lý do: bộ từ vựng của các mô hình phổ biến được xây chủ yếu từ dữ liệu tiếng Anh, nên tiếng Anh dễ gói gọn hơn. Nghiên cứu trên 22 ngôn ngữ đã xác nhận: người dùng ngôn ngữ ngoài tiếng Anh trả phí cao hơn cho cùng một việc, và thường nhận kết quả kém hơn.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span><strong>Đây không phải sai số nhỏ. Với dân văn phòng xử lý hàng trăm văn bản/tháng bằng tiếng Việt, đây là chi phí thật, lặp lại mỗi ngày.</strong></span></p>
+<p class="readerBody_paragraph__yI4m6"><span>📌 Cách ứng phó: câu lệnh càng gọn càng tốt. "Tóm tắt báo cáo 40 trang" luôn tốn hơn "tóm tắt đoạn này" — cắt bớt phần không cần thiết trước khi đưa vào AI.</span></p>
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+<h2 class="readerBody_subhead__fsVE_" data-reader-heading="true" id="tri-nho-cua-ai-cung-do-bang-token-va-co-mot-diem-mu-nguy-hiem">🧠 4. Trí nhớ của AI cũng đo bằng token — và có một điểm mù nguy hiểm</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Mỗi mô hình chỉ giữ được một lượng token nhất định cùng lúc — gọi là <strong>cửa sổ ngữ cảnh</strong>. Vượt quá, phần dư sẽ bị "rơi" khỏi tầm nhìn của AI.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>Nhưng có một cái bẫy ít ai để ý: <strong>ngay cả khi tài liệu vẫn nằm gọn trong giới hạn, AI vẫn dễ bỏ sót thông tin nằm ở giữa văn bản.</strong> Đầu và cuối tài liệu được nhớ tốt. Đoạn giữa — nơi thường chứa điều khoản quan trọng trong hợp đồng, hay số liệu chốt trong báo cáo — dễ bị lướt qua nhất.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>📌 Cách ứng phó: nếu có chi tiết bắt buộc AI phải xử lý đúng, đừng chôn nó ở giữa một tài liệu dài. Đặt nó ở đầu hoặc nhắc lại ở cuối câu lệnh.</span></p>
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+<h2 class="readerBody_subhead__fsVE_" data-reader-heading="true" id="cai-bay-pho-bien-nhat-nghi-ai-doc-giong-nguoi">🚫 Cái bẫy phổ biến nhất: nghĩ AI đọc giống người</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Vì AI viết trôi chảy, ai cũng dễ tin nó đọc từng chữ như con người. Không phải vậy. AI mạnh chỉ là <strong>đã được huấn luyện tốt để đoán lại chữ cái khi cần</strong> — nhưng cơ chế bên dưới vẫn là xử lý từng mảnh ghép, không phải từng chữ.</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>Gặp thứ nằm ngoài dự đoán của quá trình huấn luyện — tên riêng lạ, ký tự đặc biệt, hoặc khi bạn dùng bản rẻ tiền hơn — điểm yếu này sẽ lộ ra ngay.</span></p>
+<div class="readerBody_exercise__r6sww">
+<div class="readerBody_exerciseHead__t2g4V">
+<svg aria-hidden="true" height="18" viewbox="0 0 18 18" width="18">
+<circle cx="9" cy="9" fill="none" r="7" stroke="currentColor" stroke-width="1.5"></circle>
+<path d="M9 5.5V9.5L11.5 11" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+<span class="readerBody_exerciseTitle__L3i5x">Tự thử: đếm chữ và so sánh token</span>
+</div>
+<p>1. Mở hai chatbot: một bản mạnh, một bản "mini"/rẻ</p>
+<p>2. Hỏi cả hai: <em>"Trong cụm từ 'ngoằn ngoèo' có bao nhiêu chữ n?"</em></p>
+<p>3. So sánh câu trả lời — mô hình nào đúng, mô hình nào lúng túng?</p>
+<p>4. Dán một câu tiếng Việt và bản dịch tiếng Anh của nó vào công cụ đếm token — so sánh số token và chi phí</p>
+<p>Làm xong bài này, bạn sẽ không còn dùng AI như một hộp đen nữa.</p>
+</div>
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+<h2 class="readerBody_subhead__fsVE_" data-reader-heading="true" id="vi-sao-chuong-nay-quan-trong-voi-ban">🚀 Vì sao chương này quan trọng với bạn</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Bạn không cần biết BPE là thuật toán gì để làm việc hiệu quả. Nhưng bạn <strong>cần biết ba điều:</strong></span></p>
+<p class="readerBody_paragraph__yI4m6"><span>1. Việc cần chính xác đến từng ký tự → chọn mô hình mạnh, đừng chọn mô hình rẻ nhất</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>2. Chi phí tính theo token, tiếng Việt tốn hơn tiếng Anh → viết câu lệnh gọn, cắt phần thừa</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>3. Thông tin quan trọng đừng chôn giữa tài liệu dài → đặt ở đầu hoặc nhắc lại cuối</span></p>
+<p class="readerBody_paragraph__yI4m6"><span>Ba nguyên tắc này sẽ theo bạn xuyên suốt cuốn sách. Chương tiếp theo sẽ nói tiếp: chính những mảnh ghép này cũng là thứ mô hình dành cả "sự nghiệp" của nó để đoán, từng mảnh một.</span></p>
+<nav aria-label="Điều hướng chương" class="readerBody_prevNext__mPOKr"><a class="readerBody_navItem__wnr_D" href="../loi-mo-dau/index.html">← Lời mở đầu</a><a class="readerBody_navItem__wnr_D readerBody_navNext__0gp_T" href="../chuong-2/index.html">Chương sau →</a></nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="kho-ma-nguon-mo" style="margin-top: 50px; padding: 32px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(18px); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);">
+  
+  <!-- HEADER KHO TÀI NGUYÊN TINH LỌC -->
+  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div style="width: 50px; height: 50px; border-radius: 14px; background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 20px rgba(0, 242, 254, 0.4);">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+      </div>
+      <div>
+        <h2 style="margin: 0; font-size: 1.75rem; font-weight: 800; color: #f8fafc; letter-spacing: -0.02em;">Kho Mã Nguồn Mở Tinh Nhuệ (Top 1 Ultimate Stack)</h2>
+        <p style="margin: 4px 0 0 0; font-size: 0.925rem; color: #94a3b8;">Đã tinh lọc đúng 18 Repo vô địch cho từng tác vụ cốt lõi + Kho lưu trữ dự phòng bên dưới.</p>
+      </div>
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <span style="font-size: 0.85rem; padding: 6px 16px; border-radius: 20px; background: rgba(0, 242, 254, 0.18); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.4); font-weight: 800; display: inline-flex; align-items: center; gap: 6px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #00f2fe; box-shadow: 0 0 10px #00f2fe;"></span> 18 Repo Tinh Nhuệ
+      </span>
+      <span style="font-size: 0.85rem; padding: 6px 16px; border-radius: 20px; background: rgba(148, 163, 184, 0.15); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.3); font-weight: 700;">
+        📦 29 Repo Dự Phòng
+      </span>
+    </div>
+  </div>
+
+  <!-- QUICK NAVIGATION PILLS -->
+  <div style="display: flex; gap: 10px; margin-bottom: 32px; flex-wrap: wrap;">
+    <a href="#elite-engineers-skills" style="text-decoration: none; font-size: 0.825rem; font-weight: 800; padding: 8px 16px; border-radius: 20px; background: rgba(0, 242, 254, 0.15); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.35);">🏆 Top 1 Senior Engineer &amp; Skills</a>
+    <a href="#elite-data-crawling" style="text-decoration: none; font-size: 0.825rem; font-weight: 800; padding: 8px 16px; border-radius: 20px; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.35);">🌐 Top 1 PDF &amp; Web RAG</a>
+    <a href="#elite-design-tools" style="text-decoration: none; font-size: 0.825rem; font-weight: 800; padding: 8px 16px; border-radius: 20px; background: rgba(244, 114, 182, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.35);">🎨 Top 1 UI Design &amp; PPT</a>
+    <a href="#elite-cybersecurity" style="text-decoration: none; font-size: 0.825rem; font-weight: 800; padding: 8px 16px; border-radius: 20px; background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.35);">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Tool)</a>
+    <a href="#archive-backup-section" style="text-decoration: none; font-size: 0.825rem; font-weight: 800; padding: 8px 16px; border-radius: 20px; background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.35);">📦 Kho Lưu Trữ Dự Phòng (29)</a>
+  </div>
+
+  <!-- ELITE SECTIONS -->
+  
+    <div id="elite-engineers-skills" style="margin-bottom: 36px; background: rgba(0, 242, 254, 0.05); border: 1.5px solid rgba(0, 242, 254, 0.4); border-radius: 18px; padding: 26px;">
+      <div style="margin-bottom: 22px;">
+        <h3 style="margin: 0 0 6px 0; font-size: 1.35rem; font-weight: 800; color: #00f2fe; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 8px; height: 24px; background: #00f2fe; border-radius: 4px; display: inline-block;"></span>
+          🏆 Top 1 Senior Engineering & Agent Skills (Vũ Khí Lập Trình)
+        </h3>
+        <p style="margin: 0 0 0 18px; font-size: 0.9rem; color: #94a3b8;">5 Repo vô địch về quy trình Senior Engineer, Claude Superpowers, Refactoring & AutoML</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        
+        <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#00f2fe';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.4);">⭐ 43.1K Stars (Google)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 Quy trình Senior Engineer (Google Chrome Lead)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Bộ 23 skill Markdown đóng gói quy trình Senior Engineer tại Google cho AI Code Agent (6 bước: Define → Plan → Build → Verify → Review → Ship).</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #00f2fe; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#00f2fe';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.4);">⭐ 204K+ Stars (Top 1)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 Claude Superpowers Framework (obra)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Skill collection thành công nhất hệ sinh thái. Biến Claude Code thành Engineering Partner chuyên nghiệp (Brainstorming → Planning → TDD → Review).</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #00f2fe; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/Chachamaru127/claude-code-harness" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#00f2fe';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.4);">Top 1 Test Harness</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 Harness & Testing Environment (Chachamaru127)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Bộ khung kiểm thử tự động & mô phỏng môi trường (Harness Environment) tối ưu riêng cho Claude Code CLI.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #00f2fe; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/refactoringhq/tolaria" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#00f2fe';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.4);">Top 1 Refactoring</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 Code Refactoring AI System (refactoringhq)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Công cụ tự động hóa tái cấu trúc mã nguồn (Refactoring) thông minh dành cho các dự án phần mềm lớn.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #00f2fe; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#00f2fe';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.4);">Top 1 AutoML Research</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 AutoResearch AutoML Agent (Andrej Karpathy)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Chỉ 630 dòng Python: Agent tự nâng cấp code training, tự chạy ~100 thí nghiệm qua đêm trên 1 GPU.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #00f2fe; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    <div id="elite-data-crawling" style="margin-bottom: 36px; background: rgba(16, 185, 129, 0.05); border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: 18px; padding: 26px;">
+      <div style="margin-bottom: 22px;">
+        <h3 style="margin: 0 0 6px 0; font-size: 1.35rem; font-weight: 800; color: #10b981; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 8px; height: 24px; background: #10b981; border-radius: 4px; display: inline-block;"></span>
+          🌐 Top 1 Data, PDF & Web Extraction (Vũ Khí Dữ Liệu & RAG)
+        </h3>
+        <p style="margin: 0 0 0 18px; font-size: 0.9rem; color: #94a3b8;">3 Repo vô địch về bóc tách PDF RAG, Web Scraper Markdown & Heavy Crawler</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        
+        <a href="https://github.com/opendataloader-project/opendataloader-pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#10b981';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">Top 1 PDF RAG Parser</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 OpenDataLoader PDF (OpenDataLoader Project)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Bộ bóc tách file PDF chuyên dụng tốt nhất hiện nay, chuyển đổi cấu trúc bảng & cột phức tạp sang định dạng LLM-ready.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #10b981; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#10b981';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">Top 1 LLM Web Crawler</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 Firecrawl Web-to-Markdown (firecrawl)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Biến toàn bộ trang web hoặc tài liệu thành định dạng Markdown chuẩn cho LLM chỉ bằng 1 API duy nhất.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #10b981; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/unclecode/crawl4ai" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#10b981';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4);">Top 1 Open-Source RAG</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 Crawl4AI Open-Source Scraper (unclecode)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Bộ cào web mã nguồn mở tốc độ cao tối ưu riêng cho AI Agents & RAG Pipeline.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #10b981; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    <div id="elite-design-tools" style="margin-bottom: 36px; background: rgba(244, 114, 182, 0.05); border: 1.5px solid rgba(244, 114, 182, 0.4); border-radius: 18px; padding: 26px;">
+      <div style="margin-bottom: 22px;">
+        <h3 style="margin: 0 0 6px 0; font-size: 1.35rem; font-weight: 800; color: #f472b6; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 8px; height: 24px; background: #f472b6; border-radius: 4px; display: inline-block;"></span>
+          🎨 Top 1 Design Intelligence, Presentation & Utilities (Vũ Khí Sáng Tạo)
+        </h3>
+        <p style="margin: 0 0 0 18px; font-size: 0.9rem; color: #94a3b8;">3 Repo vô địch về UI Design Intelligence, Auto PPT & Screen Recording</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        
+        <a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#f472b6';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.4);">⭐ 92K+ Stars (Top 1 UI)</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 UI/UX Pro Max Skill (nextlevelbuilder)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Cung cấp Design Intelligence giúp AI biến thành một Design Director tạo giao diện chuẩn đẹp mắt.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #f472b6; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#f472b6';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.4);">Top 1 PPT Generator</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 PPT Master Generator (hugohe3)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Công cụ AI tự động tạo bài thuyết trình PowerPoint ấn tượng từ văn bản và cấu trúc ý tưởng.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #f472b6; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/webadderallorg/Recordly" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#f472b6';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.4);">Top 1 Dev Recorder</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🥇 Recordly Screen Recorder (webadderallorg)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Ứng dụng quay màn hình và ghi lại thao tác màn hình siêu nhẹ tối ưu cho lập trình viên & creator.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #f472b6; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+    <div id="elite-cybersecurity" style="margin-bottom: 36px; background: rgba(239, 68, 68, 0.05); border: 1.5px solid rgba(239, 68, 68, 0.4); border-radius: 18px; padding: 26px;">
+      <div style="margin-bottom: 22px;">
+        <h3 style="margin: 0 0 6px 0; font-size: 1.35rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 10px;">
+          <span style="width: 8px; height: 24px; background: #ef4444; border-radius: 4px; display: inline-block;"></span>
+          🛡️ Cybersecurity, All-in-One Hacking & Red Team (Bộ Bảo Mật Chuyên Sâu)
+        </h3>
+        <p style="margin: 0 0 0 18px; font-size: 0.9rem; color: #94a3b8;">7 Vũ khí bảo mật đa dạng: Pentest Toolkit, Pentest Agent, Red Team Skills & Reverse Engineering</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        
+        <a href="https://github.com/Z4nzu/hackingtool" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#ef4444';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4);">🛡️ Top 1 All-in-One</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🛡️ All-in-One Hackingtool (Z4nzu)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Bộ sưu tập công cụ bảo mật & pentesting toàn diện hàng đầu trên GitHub bao gồm Web, Network, OSINT & Wireless.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/PentesterFlow/agent" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#ef4444';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4);">CLI Pentest Agent</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🛡️ CLI Pentest AI Agent (PentesterFlow)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Terminal AI Agent cho Pentester: IDOR, SSRF, SSTI, Burp Suite tích hợp & 20+ slash commands.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/uphiago/recon-skills" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#ef4444';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4);">212 Pentest Skills</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🛡️ 212 Red Team Skills (uphiago)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Bộ 212 kỹ năng tấn công từ 600+ mục tiêu thực chiến cho Claude Code & Red Team.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/weirdmachine64/GhidraGPT" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#ef4444';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4);">Reverse Engineering</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🛡️ GhidraGPT Reverse Engineering (weirdmachine64)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Plugin Ghidra tích hợp LLMs (GPT, Claude, Gemini, DeepSeek) cho Reverse Engineering.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/cr0hn/dockerscan" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#ef4444';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4);">Container Audit</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🛡️ Dockerscan Container Security (cr0hn)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Quét lỗ hổng Docker image & Audit cấu hình container theo chuẩn CIS Benchmark.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#ef4444';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4);">Cybersecurity Skills</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🛡️ Anthropic Cybersecurity Skills (mukul975)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Bộ kỹ năng an ninh mạng chuyên sâu xây dựng cho các mô hình Claude & AI Agents.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+        <a href="https://github.com/evyatarmeged/Raccoon" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
+          <div style="background: rgba(30, 41, 59, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 22px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 14px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='#ef4444';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.35)';" onmouseout="this.style.transform='none';this.style.borderColor='rgba(255, 255, 255, 0.12)';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.2)';">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <span style="font-size: 0.78rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4);">Recon & Fuzzing</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </div>
+              <h4 style="margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 800; color: #f8fafc;">🛡️ Raccoon Vulnerability Scanner (evyatarmeged)</h4>
+              <p style="margin: 0; font-size: 0.875rem; color: #94a3b8; line-height: 1.6;">Reconnaissance & Vulnerability Scanning tốc độ cao với Python Asyncio.</p>
+            </div>
+            <div style="margin-top: 18px; font-size: 0.825rem; font-weight: 800; color: #ef4444; display: flex; align-items: center; gap: 4px;">Truy cập Repo Vô Địch &rarr;</div>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+    
+
+  <!-- COLLAPSIBLE ARCHIVE SECTION FOR BACKUP REPOS -->
+  <div id="archive-backup-section" style="margin-top: 50px; background: rgba(30, 41, 59, 0.5); border: 1px dashed rgba(148, 163, 184, 0.3); border-radius: 18px; padding: 26px;">
+    <details>
+      <summary style="cursor: pointer; font-size: 1.2rem; font-weight: 800; color: #cbd5e1; display: flex; align-items: center; gap: 10px; user-select: none;">
+        <span style="padding: 4px 12px; background: rgba(148, 163, 184, 0.2); border-radius: 8px; color: #38bdf8; font-size: 0.9rem;">Mở Rộng</span>
+        📦 Kho Lưu Trữ &amp; Dự Phòng Các Repo Khác (29 Tài Nguyên Trùng/Mở Rộng)
+      </summary>
+      <p style="margin: 12px 0 24px 0; font-size: 0.875rem; color: #94a3b8;">Dưới đây là danh sách đầy đủ các repo đã được phân loại lưu trữ dự phòng. Khi bạn cần tra cứu thêm các biến thể hoặc công cụ thay thế, bạn có thể xem lại tại đây bất kỳ lúc nào.</p>
+      
+    <div style="margin-bottom: 20px;">
+      <h4 style="margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 700; color: #cbd5e1;">📦 Kho Dự Phòng: Claude Skills & Frameworks Mở Rộng</h4>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/garrytan/gstack" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">GStack (Garry Tan / YC CEO)</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Bộ 25 Skills từ CEO Y Combinator.</span>
+          </div>
+          <a href="https://github.com/garrytan/gstack" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Matt Pocock TypeScript Skills</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Skill TypeScript thực chiến.</span>
+          </div>
+          <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/OpenSenseNova/SenseNova-Skills" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">SenseNova-Skills</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Bộ kỹ năng AI SenseNova.</span>
+          </div>
+          <a href="https://github.com/OpenSenseNova/SenseNova-Skills" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Official Anthropic Skills</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Skills chính thức từ Anthropic.</span>
+          </div>
+          <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/google/skills" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Google Official Skills</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Skills chính thức từ Google.</span>
+          </div>
+          <a href="https://github.com/google/skills" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/emilkowalski/skills" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">emilkowalski / skills</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Design skills từ Emil Kowalski.</span>
+          </div>
+          <a href="https://github.com/emilkowalski/skills" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Frontend Design Skill</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Design System Skill.</span>
+          </div>
+          <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/anthropics/skills/tree/main/skills/canvas-design" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Canvas Design Skill</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Social & Poster Design Skill.</span>
+          </div>
+          <a href="https://github.com/anthropics/skills/tree/main/skills/canvas-design" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/anthropics/skills/tree/main/skills/brand-guidelines" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Brand Guidelines Skill</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Brand identity Skill.</span>
+          </div>
+          <a href="https://github.com/anthropics/skills/tree/main/skills/brand-guidelines" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/coreyhaines31/marketingskills" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Marketing Skills (Corey Haines)</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— 20+ Marketing Skills.</span>
+          </div>
+          <a href="https://github.com/coreyhaines31/marketingskills" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <h4 style="margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 700; color: #cbd5e1;">📦 Kho Dự Phòng: Parsing, Web Crawlers & AI Utilities</h4>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Microsoft MarkItDown</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Chuyển PDF/Docx/Xlsx sang Markdown.</span>
+          </div>
+          <a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Archify Codebase Parser</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Tree-sitter parser codebase.</span>
+          </div>
+          <a href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/Egonex-AI/Understand-Anything" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Understand Anything</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Biến codebase thành Knowledge Graph.</span>
+          </div>
+          <a href="https://github.com/Egonex-AI/Understand-Anything" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Browser-use Agent</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Tự động hóa trình duyệt web cho AI.</span>
+          </div>
+          <a href="https://github.com/browser-use/browser-use" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/apify/crawlee" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Crawlee (Apify)</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Cào web cho Node.js/Python.</span>
+          </div>
+          <a href="https://github.com/apify/crawlee" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/D4Vinci/Scrapling" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Scrapling</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Cào web không lo bị chặn bot.</span>
+          </div>
+          <a href="https://github.com/D4Vinci/Scrapling" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/yifanfeng97/Hyper-Extract" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Hyper-Extract</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— AI Trích xuất thông tin tài liệu.</span>
+          </div>
+          <a href="https://github.com/yifanfeng97/Hyper-Extract" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/alirezamika/autoscraper" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">AutoScraper</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Smart scraper học ví dụ.</span>
+          </div>
+          <a href="https://github.com/alirezamika/autoscraper" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/Ahmadibrahiim/Website-downloader" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Website Downloader</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Tải toàn bộ web về máy offline.</span>
+          </div>
+          <a href="https://github.com/Ahmadibrahiim/Website-downloader" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <h4 style="margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 700; color: #cbd5e1;">📦 Kho Dự Phòng: UI Kits, Prompts Magic & Microservices</h4>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/bergside/typeui" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">TypeUI Component Library</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Thư viện UI tối giản.</span>
+          </div>
+          <a href="https://github.com/bergside/typeui" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/bergside/design-md-chrome" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Design-MD Chrome Extension</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Trích xuất UI sang Markdown.</span>
+          </div>
+          <a href="https://github.com/bergside/design-md-chrome" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Open Design Kit</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Open source Design System.</span>
+          </div>
+          <a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Awesome GPT Image-2 Prompts</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Prompt hình ảnh GPT Image 2.</span>
+          </div>
+          <a href="https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Awesome Nano Banana Prompts</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Nano Prompts collection.</span>
+          </div>
+          <a href="https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/kadevin/ilab-gpt-conjure" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">ilab-gpt-conjure</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Công cụ triệu hồi prompt GPT.</span>
+          </div>
+          <a href="https://github.com/kadevin/ilab-gpt-conjure" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/daonhan/Microservices-in-.NET" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Microservices in .NET</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Mẫu kiến trúc .NET Microservices.</span>
+          </div>
+          <a href="https://github.com/daonhan/Microservices-in-.NET" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/tw93/pake" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Pake Desktop App Maker</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Đóng gói Web thành App Desktop.</span>
+          </div>
+          <a href="https://github.com/tw93/pake" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://github.com/webadderallorg/Recordly" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Recordly</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Quay màn hình thao tác mượt.</span>
+          </div>
+          <a href="https://github.com/webadderallorg/Recordly" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+        <div style="padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <a href="https://slim.vn/emojipad/" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #38bdf8; text-decoration: none; font-size: 0.95rem;">Emojipad</a>
+            <span style="font-size: 0.825rem; color: #94a3b8; margin-left: 10px;">— Bộ chọn Emoji giao diện.</span>
+          </div>
+          <a href="https://slim.vn/emojipad/" target="_blank" rel="noopener noreferrer" style="font-size: 0.775rem; padding: 4px 10px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; text-decoration: none; font-weight: 700;">Xem Repo &rarr;</a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </details>
+  </div>
+
+</section>
+
+</article></div><aside class="reader_rail__JAVbC"><div><div class="reader_railLabel__uZjKT">TIẾN ĐỘ ĐỌC</div><div aria-hidden="true" class="reader_railTrack__pjfm0"><div class="reader_railFill__pNZTF" style="width:0%"></div></div><div aria-hidden="true" class="reader_railPercent__rfRCH">0%</div><nav aria-label="Trong chương này"><div class="reader_railLabel__uZjKT reader_railHeading__AGcCd">TRONG CHƯƠNG NÀY</div><ul class="reader_railSections__uLJ_a">
+<li><a class="reader_railSection__fR9f4" href="#ai-khong-doc-cong-van-cua-ban-nhu-ban-nghi">⚡ AI không đọc công văn</a></li>
+<li><a class="reader_railSection__fR9f4" href="#cau-chu-cua-ban-bi-cat-thanh-lego-truoc-khi-ai-nhin-thay">🧩 1. Câu chữ bị cắt thành LEGO</a></li>
+<li><a class="reader_railSection__fR9f4" href="#bang-chung-ban-co-the-tu-kiem-tra-trong-30-giay">🔍 2. Bằng chứng kiểm tra 30s</a></li>
+<li><a class="reader_railSection__fR9f4" href="#vi-sao-lam-viec-bang-tieng-viet-ton-tien-hon-tieng-anh">💰 3. Tiếng Việt tốn tiền hơn</a></li>
+<li><a class="reader_railSection__fR9f4" href="#tri-nho-cua-ai-cung-do-bang-token-va-co-mot-diem-mu-nguy-hiem">🧠 4. Trí nhớ &amp; điểm mù AI</a></li>
+<li><a class="reader_railSection__fR9f4" href="#cai-bay-pho-bien-nhat-nghi-ai-doc-giong-nguoi">🚫 Cái bẫy nghĩ AI đọc giống người</a></li>
+<li><a class="reader_railSection__fR9f4" href="#vi-sao-chuong-nay-quan-trong-voi-ban">🚀 Vì sao chương này quan trọng</a></li>
+</ul></nav></div></aside></div><!--$--><!--/$--></main><footer class="Footer_footer__UaG1g"><a class="Footer_brand___zP6t" href="../../index.html"><span class="Logo_lockup__DjkOB Logo_sm__82urK"><span class="Logo_learning__zJhMj">Trung</span><span class="Logo_ai__6l5Xv">vt</span><span class="Logo_vn__foqO1">co</span></span></a><div class="Footer_nav__DEri8"><a class="Footer_link__EWWOW" href="../../index.html">Trang chủ</a><a class="Footer_link__EWWOW" href="../index.html">Sách</a><a class="Footer_link__EWWOW" href="https://thu-vien-52-prompt.vercel.app/" target="_blank" rel="noopener noreferrer">52 System Prompt</a></div><p class="Footer_contact__Qek_T">Zalo Liên hệ: <a class="Footer_contactLink__ZkhIE" href="https://zalo.me/0836384168" target="_blank" rel="noopener noreferrer">0836384168</a></p><span class="Footer_copyright__j5CNb">© 2026 Trungvt</span></footer><script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"334c88aeeac8493b8f2d561663b3bdef","r":1}' integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" type="module"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1ff65a27dd4fdf8',t:'MTc4NDg1OTExNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+
+<script id="custom-cursor-script">
+  // 1. Dark mode toggle
+  const darkToggle = document.querySelector('.reader_darkToggle__fe_JD');
+  if (darkToggle) {
+    darkToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('reader-theme', 'light');
+        darkToggle.setAttribute('aria-pressed', 'false');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('reader-theme', 'dark');
+        darkToggle.setAttribute('aria-pressed', 'true');
+      }
+    });
+  }
+
+  // 2. Mobile / Desktop TOC trigger
+  const tocTrigger = document.querySelector('.reader_tocTrigger__kx6Zs');
+  const sidebar = document.querySelector('.reader_sidebar__2G6R_');
+  const grid = document.querySelector('.reader_grid__jzzrU');
+  if (tocTrigger && sidebar && grid) {
+    tocTrigger.addEventListener('click', () => {
+      if (window.innerWidth >= 1024) {
+        const isCollapsed = grid.classList.toggle('reader_gridCollapsed__4Vxmv');
+        if (isCollapsed) {
+          sidebar.style.display = 'none';
+          tocTrigger.setAttribute('aria-expanded', 'false');
+        } else {
+          sidebar.style.display = 'block';
+          tocTrigger.setAttribute('aria-expanded', 'true');
+        }
+        sidebar.style.position = '';
+        sidebar.style.top = '';
+        sidebar.style.left = '';
+        sidebar.style.width = '';
+        sidebar.style.height = '';
+        sidebar.style.zIndex = '';
+        sidebar.style.background = '';
+        sidebar.style.padding = '';
+        sidebar.style.overflowY = '';
+      } else {
+        const isVisible = sidebar.style.display === 'block' && sidebar.style.position === 'fixed';
+        if (isVisible) {
+          sidebar.style.display = '';
+          sidebar.style.position = '';
+          sidebar.style.top = '';
+          sidebar.style.left = '';
+          sidebar.style.width = '';
+          sidebar.style.height = '';
+          sidebar.style.zIndex = '';
+          sidebar.style.background = '';
+          sidebar.style.padding = '';
+          sidebar.style.overflowY = '';
+          tocTrigger.setAttribute('aria-expanded', 'false');
+        } else {
+          sidebar.style.display = 'block';
+          sidebar.style.position = 'fixed';
+          sidebar.style.top = '73px';
+          sidebar.style.left = '0';
+          sidebar.style.width = '100%';
+          sidebar.style.height = 'calc(100vh - 73px)';
+          sidebar.style.zIndex = '99';
+          sidebar.style.background = 'var(--paper)';
+          sidebar.style.padding = '20px';
+          sidebar.style.overflowY = 'auto';
+          tocTrigger.setAttribute('aria-expanded', 'true');
+        }
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        sidebar.style.position = '';
+        sidebar.style.top = '';
+        sidebar.style.left = '';
+        sidebar.style.width = '';
+        sidebar.style.height = '';
+        sidebar.style.zIndex = '';
+        sidebar.style.background = '';
+        sidebar.style.padding = '';
+        sidebar.style.overflowY = '';
+        if (grid.classList.contains('reader_gridCollapsed__4Vxmv')) {
+          sidebar.style.display = 'none';
+        } else {
+          sidebar.style.display = 'block';
+        }
+      } else {
+        grid.classList.remove('reader_gridCollapsed__4Vxmv');
+        if (sidebar.style.position !== 'fixed') {
+          sidebar.style.display = '';
+        }
+      }
+    });
+  }
+
+  // 3. Scroll Spy for Right-hand TOC "Trong chương này"
+  const links = document.querySelectorAll('.reader_railSection__fR9f4');
+  const headings = Array.from(links).map(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      return document.querySelector(href);
+    }
+    return null;
+  }).filter(Boolean);
+
+  // Click handler to immediately set active state
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      links.forEach(l => l.classList.remove('reader_railSectionActive__qLCS4'));
+      link.classList.add('reader_railSectionActive__qLCS4');
+    });
+  });
+
+  // Intersection Observer for scroll spy
+  if (headings.length > 0 && 'IntersectionObserver' in window) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -40% 0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      let activeHeading = null;
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          activeHeading = entry.target;
+          break;
+        }
+      }
+      
+      if (activeHeading) {
+        const id = '#' + activeHeading.id;
+        const targetLink = document.querySelector(`.reader_railSection__fR9f4[href="${id}"]`);
+        if (targetLink) {
+          links.forEach(l => l.classList.remove('reader_railSectionActive__qLCS4'));
+          targetLink.classList.add('reader_railSectionActive__qLCS4');
+        }
+      }
+    }, observerOptions);
+
+    headings.forEach(heading => observer.observe(heading));
+  }
+
+  // 4. Reading Progress scroll listener
+  const progressPercentText = document.querySelector('.reader_railPercent__rfRCH');
+  const progressFillSidebar = document.querySelector('.reader_railFill__pNZTF');
+  const progressFillTop = document.querySelector('.reader_progressFill__R1ihK');
+
+  function updateReadingProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      const progress = Math.min(Math.round((scrollTop / docHeight) * 100), 100);
+      if (progressPercentText) progressPercentText.textContent = `${progress}%`;
+      if (progressFillSidebar) progressFillSidebar.style.width = `${progress}%`;
+      if (progressFillTop) progressFillTop.style.width = `${progress}%`;
+    }
+  }
+
+  window.addEventListener('scroll', updateReadingProgress, { passive: true });
+  updateReadingProgress(); // Initial execution
+
+  // 5. Custom Cursor Follower (Nguyen Xuan Tai style)
+  if (window.innerWidth > 1024) {
+    let dot = null;
+    let follower = null;
+    let mouseX = 0;
+    let mouseY = 0;
+    let followerX = 0;
+    let followerY = 0;
+
+    const checkAndCreateCursor = () => {
+      dot = document.getElementById('custom-cursor-dot');
+      follower = document.getElementById('custom-cursor-follower');
+      if (!dot) {
+        dot = document.createElement('div');
+        dot.id = 'custom-cursor-dot';
+        document.body.appendChild(dot);
+      }
+      if (!follower) {
+        follower = document.createElement('div');
+        follower.id = 'custom-cursor-follower';
+        document.body.appendChild(follower);
+      }
+    };
+    checkAndCreateCursor();
+    setInterval(checkAndCreateCursor, 1000);
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (dot) {
+        dot.style.left = mouseX + 'px';
+        dot.style.top = mouseY + 'px';
+      }
+    });
+
+    function animateFollower() {
+      if (follower) {
+        const dx = mouseX - followerX;
+        const dy = mouseY - followerY;
+        followerX += dx * 0.15;
+        followerY += dy * 0.15;
+        follower.style.left = followerX + 'px';
+        follower.style.top = followerY + 'px';
+      }
+      requestAnimationFrame(animateFollower);
+    }
+    requestAnimationFrame(animateFollower);
+
+    // Dynamic hover scaling on hoverable elements
+    const attachHoverEvents = () => {
+      document.querySelectorAll('a, button, input, select, textarea, [role="button"], .reader_tocTrigger__kx6Zs, .reader_darkToggle__fe_JD, .reader_railSection__fR9f4, .reader_chapterLink__oN1gG').forEach(el => {
+        if (!el.dataset.hasCursorEvents) {
+          el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+          el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+          el.dataset.hasCursorEvents = 'true';
+        }
+      });
+    };
+    attachHoverEvents();
+    setInterval(attachHoverEvents, 1000);
+  }
+</script>
+<script src="../../lesson-tree-modal.js"></script></body></html>

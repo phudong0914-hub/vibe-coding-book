@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="learningai.vn">
+  <!-- Favicon: glyph 2a on a paper tile (design handoff assets/favicon.svg),
+       with the dark trio (assets/favicon-dark.svg) folded in as a
+       prefers-color-scheme variant so the mark sits well in a dark browser
+       tab. One self-adapting file keeps Next's icon.svg convention (a single
+       canonical <link>) instead of the less-reliable media-scoped icon links.
+       Literal hexes: static image asset, mirroring the tokens they stand in for
+       (--paper/--ink/--accent; dark: cream/soft-green/dark-tint). -->
+  <style>
+    .tile { fill: #f6f1e7; }
+    .edge { stroke: #d8cfbc; }
+    .stroke { stroke: #29231a; }
+    .n1 { fill: #29231a; }
+    .n2 { fill: #1e5f56; }
+    .n3 { fill: #ede6d5; stroke: #b3a88f; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #211c13; }
+      .edge { stroke: none; }
+      .stroke { stroke: #ede6d6; }
+      .n1 { fill: #ede6d6; }
+      .n2 { fill: #8fc6b7; }
+      .n3 { fill: #3b3423; stroke: #8a7f66; }
+    }
+  </style>
+  <rect class="tile" width="64" height="64" rx="16"></rect>
+  <rect class="edge" x="0.5" y="0.5" width="63" height="63" rx="15.5" fill="none"></rect>
+  <g transform="translate(11,11) scale(0.875)">
+    <path class="stroke" d="M8 40 L24 24 L40 8" stroke-width="3" fill="none"></path>
+    <rect class="n1" x="2" y="34" width="12" height="12" rx="2.5"></rect>
+    <rect class="n2" x="18" y="18" width="12" height="12" rx="2.5"></rect>
+    <rect class="n3" x="34" y="2" width="12" height="12" rx="2.5" stroke-width="1"></rect>
+  </g>
+</svg>

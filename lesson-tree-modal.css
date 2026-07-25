@@ -1,0 +1,456 @@
+/* Lesson Tree Modal & Drawer Design System */
+.ltm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 14, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  cursor: default !important;
+}
+
+.ltm-overlay.ltm-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ltm-container {
+  width: 92%;
+  max-width: 860px;
+  max-height: 85vh;
+  background: #141418;
+  border: 1px solid rgba(255, 200, 0, 0.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 185, 0, 0.15);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.95) translateY(15px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #e5e5e7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.ltm-overlay.ltm-active .ltm-container {
+  transform: scale(1) translateY(0);
+}
+
+/* Header */
+.ltm-header {
+  padding: 20px 24px 16px;
+  background: #1a1a20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.ltm-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.ltm-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ltm-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffc800 0%, #e69500 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 0 15px rgba(255, 200, 0, 0.3);
+
+}
+
+.ltm-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+
+}
+
+.ltm-subtitle {
+  font-size: 0.85rem;
+  color: #a0a0ab;
+  margin-top: 2px;
+}
+
+.ltm-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #a0a0ab;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.ltm-close-btn:hover {
+  background: rgba(255, 200, 0, 0.2);
+  color: #ffc800;
+  border-color: rgba(255, 200, 0, 0.4);
+  transform: rotate(90deg);
+}
+
+/* Search Bar & Stats */
+.ltm-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.ltm-search-box {
+  flex: 1;
+  position: relative;
+}
+
+.ltm-search-input {
+  width: 100%;
+  padding: 10px 16px 10px 38px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.ltm-search-input:focus {
+  border-color: #ffc800;
+  background: rgba(255, 200, 0, 0.05);
+  box-shadow: 0 0 10px rgba(255, 200, 0, 0.15);
+}
+
+.ltm-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #71717a;
+  font-size: 15px;
+}
+
+/* Tabs Bar */
+.ltm-tabs-bar {
+  display: flex;
+  background: #141418;
+  padding: 8px 24px 0;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ltm-tab-btn {
+  padding: 10px 18px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #90909a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.ltm-tab-btn:hover {
+  color: #ffffff;
+}
+
+.ltm-tab-btn.ltm-tab-active {
+  color: #ffc800;
+  border-bottom-color: #ffc800;
+}
+
+/* Body Content */
+.ltm-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+.ltm-tab-content {
+  display: none;
+}
+
+.ltm-tab-content.ltm-content-active {
+  display: block;
+}
+
+/* Module Accordion */
+.ltm-module-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.ltm-module-card:hover {
+  border-color: rgba(255, 200, 0, 0.25);
+}
+
+.ltm-module-header {
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ltm-module-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ltm-module-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 200, 0, 0.15);
+  color: #ffc800;
+  text-transform: uppercase;
+}
+
+.ltm-module-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ltm-module-chevron {
+  color: #71717a;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.ltm-module-card.ltm-expanded .ltm-module-chevron {
+  transform: rotate(180deg);
+  color: #ffc800;
+}
+
+.ltm-module-body {
+  display: none;
+  padding: 6px 12px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.ltm-module-card.ltm-expanded .ltm-module-body {
+  display: block;
+}
+
+/* Lesson Items */
+.ltm-lesson-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  margin-top: 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #d1d1d6;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.ltm-lesson-item:hover {
+  background: rgba(255, 200, 0, 0.1);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.ltm-lesson-item.ltm-lesson-current {
+  background: rgba(255, 200, 0, 0.18);
+  border: 1px solid rgba(255, 200, 0, 0.4);
+  color: #ffc800;
+  font-weight: 600;
+}
+
+.ltm-lesson-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ltm-lesson-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #a0a0ab;
+}
+
+.ltm-lesson-item.ltm-lesson-current .ltm-lesson-num {
+  background: #ffc800;
+  color: #141418;
+}
+
+.ltm-lesson-title {
+  font-size: 0.9rem;
+}
+
+.ltm-lesson-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ltm-badge-now {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #ffc800;
+  color: #141418;
+  font-weight: 700;
+}
+
+.ltm-time-tag {
+  font-size: 0.75rem;
+  color: #71717a;
+}
+
+/* Roadmap Grid */
+.ltm-roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.ltm-roadmap-card {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  position: relative;
+}
+
+.ltm-roadmap-step {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffc800;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.ltm-roadmap-h {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.ltm-roadmap-desc {
+  font-size: 0.82rem;
+  color: #a0a0ab;
+  line-height: 1.4;
+}
+
+/* Premium Glossary Terms & Keyword Highlights */
+.readerBody_glossaryTerm__TJ0RO {
+  font-family: var(--family-sans, system-ui, sans-serif) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #ff7a45 !important; /* High contrast energetic coral-orange accent */
+  letter-spacing: -0.01em !important;
+  margin-top: 24px !important;
+  margin-bottom: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 16px !important;
+  background: rgba(255, 122, 69, 0.12) !important;
+  border: 1px solid rgba(255, 122, 69, 0.35) !important;
+  border-left: 4px solid #ff7a45 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(255, 122, 69, 0.15) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+[data-theme="dark"] .readerBody_glossaryTerm__TJ0RO {
+  color: #ff9c6e !important;
+  background: rgba(255, 156, 110, 0.16) !important;
+  border-color: rgba(255, 156, 110, 0.45) !important;
+  border-left-color: #ff9c6e !important;
+  box-shadow: 0 4px 18px rgba(255, 156, 110, 0.22) !important;
+}
+
+.readerBody_glossaryTerm__TJ0RO:hover {
+  transform: translateX(4px);
+  background: rgba(255, 122, 69, 0.2) !important;
+  box-shadow: 0 6px 22px rgba(255, 122, 69, 0.3) !important;
+}
+
+.readerBody_glossaryDef__3oVe_ {
+  padding-left: 14px !important;
+  border-left: 2px solid rgba(255, 122, 69, 0.25) !important;
+  margin-left: 6px !important;
+  margin-bottom: 24px !important;
+  font-size: 18.5px !important;
+  line-height: 1.7 !important;
+}
+
+.readerBody_glossaryDef__3oVe_ em {
+  color: #ffa940 !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  background: rgba(255, 169, 64, 0.12) !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+  margin-left: 6px !important;
+  font-size: 0.9em !important;
+}
+
+@media (max-width: 640px) {
+  .ltm-container {
+    width: 96%;
+    max-height: 92vh;
+    border-radius: 16px;
+  }
+  .ltm-header {
+    padding: 16px 16px 12px;
+  }
+  .ltm-tabs-bar {
+    padding: 4px 12px 0;
+  }
+  .ltm-tab-btn {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+  .ltm-body {
+    padding: 14px;
+  }
+}

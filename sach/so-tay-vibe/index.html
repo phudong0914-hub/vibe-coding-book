@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="vi" class="__variable_749080 __variable_a9b986"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="../../_next/static/media/00f4982f357db61e-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/167e329a59dea0bd-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/19008abd0e063b4a-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/2173e4bb28c315da-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/25ab8995c98996d7-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/28fd122d5a25bf39-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/8201559e247ad180-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/a4f5b89dac3239e3-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/cd79e1ff94fa521b-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="../../_next/static/media/e11f95d95ac59fa4-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="../../_next/static/css/77f36fb05ce06f59.css" data-precedence="next"/><link rel="stylesheet" href="../../_next/static/css/82899afa782e69ac.css" data-precedence="next"/><link rel="stylesheet" href="../../_next/static/css/98e0d5cdcb08e5db.css" data-precedence="next"/><meta name="next-size-adjust" content=""/><title>Sổ tay Vibe Coding · Trungvt.co</title><meta name="description" content="Sổ tay hướng dẫn thực chiến từng bước (Step-by-Step Playbook) xây dựng ứng dụng Web hay Tool từ 0 đến Ship sản phẩm."/><link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16"/><script>(function(){try{if(!location.pathname.startsWith('/sach/'))return;var t=localStorage.getItem('reader-theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<style>
+  .vibe-step-box { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: 16px; padding: 28px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+  .vibe-step-title { font-size: 1.35rem; font-weight: 800; color: #00f2fe; margin: 0 0 10px 0; display: flex; align-items: center; gap: 10px; }
+  .vibe-badge { font-size: 0.8rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; background: rgba(0, 242, 254, 0.15); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.35); }
+  .vibe-code-block { background: #0f172a; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 14px 18px; font-family: monospace; color: #38bdf8; font-size: 0.9rem; margin: 12px 0; overflow-x: auto; }
+  .vibe-prompt-quote { background: rgba(245, 158, 11, 0.08); border-left: 4px solid #fbbf24; border-radius: 4px; padding: 14px 18px; color: #fef08a; font-size: 0.925rem; line-height: 1.6; margin: 12px 0; }
+</style>
+</head>
+<body>
+  <header class="Header_header__MvnS2" style="background: rgba(15,23,42,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.1); position: sticky; top:0; z-index:100;">
+    <div class="Header_inner__ggL_E" style="max-width:1200px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between;">
+      <a class="Header_brand__tPzig" href="../../index.html" style="text-decoration:none; display:flex; align-items:center; gap:10px;">
+        <span class="Logo_lockup__DjkOB Logo_md__qpqSF"><span class="Logo_learning__zJhMj" style="font-weight:800; color:#fff; font-size:1.4rem;">Trung</span><span class="Logo_ai__6l5Xv" style="font-weight:800; color:#00f2fe; font-size:1.4rem;">vt</span><span class="Logo_vn__foqO1" style="font-weight:800; color:#94a3b8; font-size:1.4rem;">.co</span></span>
+      </a>
+      <nav class="Header_desktopNav__hqXo_" style="display:flex; align-items:center; gap:24px;">
+        <a class="Header_navLink__Q_hTB" href="../../index.html" style="color:#94a3b8; text-decoration:none; font-weight:700; font-size:0.95rem;">Trang chủ</a>
+        <a class="Header_navLink__Q_hTB" href="index.html" style="color:#00f2fe; text-decoration:none; font-weight:800; font-size:0.95rem; border-bottom:2px solid #00f2fe; padding-bottom:4px;">Sổ tay Vibe</a>
+        <a class="Header_navLink__Q_hTB" href="../../sach/index.html" style="color:#94a3b8; text-decoration:none; font-weight:700; font-size:0.95rem;">Sách</a>
+        <a class="Header_navLink__Q_hTB" href="https://thu-vien-52-prompt.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:#94a3b8; text-decoration:none; font-weight:700; font-size:0.95rem;">52 System Prompt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width:960px; margin:40px auto; padding:0 24px; color:#f8fafc;">
+    
+    <!-- HEADER TITLE BANNER -->
+    <div style="text-align:center; margin-bottom:50px; padding:36px; background: linear-gradient(135deg, rgba(0,242,254,0.1) 0%, rgba(79,172,254,0.05) 100%); border:1px solid rgba(0,242,254,0.3); border-radius:24px;">
+      <span style="font-size:0.85rem; font-weight:800; padding:6px 18px; border-radius:20px; background:rgba(0,242,254,0.2); color:#00f2fe; border:1px solid rgba(0,242,254,0.4); text-transform:uppercase; letter-spacing:1px;">Official Playbook</span>
+      <h1 style="font-size:2.3rem; font-weight:800; margin:16px 0 12px 0; color:#f8fafc; letter-spacing:-0.02em;">Sổ Tay Vibe Coding Thực Chiến</h1>
+      <p style="font-size:1.05rem; color:#94a3b8; max-width:720px; margin:0 auto; line-height:1.6;">Hướng dẫn chi tiết từng bước (Step-by-Step) áp dụng 18 Repo Tinh Nhuệ giúp bạn xây dựng bất kỳ ứng dụng Web hay Tool nào từ con số 0 đến khi Ship sản phẩm hoàn chỉnh.</p>
+    </div>
+
+    <!-- PLAYBOOK OVERVIEW MAP -->
+    <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:24px; margin-bottom:40px;">
+      <h3 style="margin:0 0 16px 0; font-size:1.1rem; color:#fbbf24; font-weight:800;">📍 Quy Trình 5 Bước Vibe Coding Chuẩn Senior:</h3>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between; text-align:center;">
+        <div style="flex:1; min-width:140px; background:rgba(255,255,255,0.04); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.08);"><b style="color:#00f2fe; display:block;">Bước 1</b><span style="font-size:0.825rem; color:#94a3b8;">Nén Context Dữ Liệu</span></div>
+        <div style="flex:1; min-width:140px; background:rgba(255,255,255,0.04); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.08);"><b style="color:#00f2fe; display:block;">Bước 2</b><span style="font-size:0.825rem; color:#94a3b8;">Lập Plan chuẩn Senior</span></div>
+        <div style="flex:1; min-width:140px; background:rgba(255,255,255,0.04); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.08);"><b style="color:#00f2fe; display:block;">Bước 3</b><span style="font-size:0.825rem; color:#94a3b8;">UI/UX Design Tokens</span></div>
+        <div style="flex:1; min-width:140px; background:rgba(255,255,255,0.04); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.08);"><b style="color:#00f2fe; display:block;">Bước 4</b><span style="font-size:0.825rem; color:#94a3b8;">Build, Test &amp; Refactor</span></div>
+        <div style="flex:1; min-width:140px; background:rgba(255,255,255,0.04); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.08);"><b style="color:#00f2fe; display:block;">Bước 5</b><span style="font-size:0.825rem; color:#94a3b8;">Audit Bảo Mật &amp; Ship</span></div>
+      </div>
+    </div>
+
+    <!-- BƯỚC 1 -->
+    <div class="vibe-step-box">
+      <div class="vibe-step-title">
+        <span class="vibe-badge">BƯỚC 1</span>
+        1. Chuẩn Bị Ngữ Cảnh &amp; Nắm Bắt Yêu Cầu (Context Ingestion)
+      </div>
+      <p style="color:#94a3b8; font-size:0.95rem; line-height:1.6;"><b>Mục tiêu:</b> Biến mọi ý tưởng, trang web tham khảo hoặc tài liệu PDF thành định dạng Markdown "sạch" để AI nuốt trọn ngữ cảnh mà không bị ngáo hay tràn cửa sổ ngữ cảnh.</p>
+      
+      <h4 style="color:#38bdf8; margin:16px 0 8px 0;">🔹 Trường hợp A: Bạn có trang web mẫu / tài liệu trên mạng muốn học theo</h4>
+      <p style="font-size:0.875rem; color:#cbd5e1; margin:0;"><b>Công cụ sử dụng:</b> <code>Firecrawl</code> (Top 1 LLM Crawler)</p>
+      <div class="vibe-code-block">npx firecrawl crawl https://trang-web-mau.com --output context.md</div>
+      <p style="font-size:0.85rem; color:#94a3b8;">➡️ Bạn sẽ thu được file <code>context.md</code> chứa toàn bộ cấu trúc &amp; nội dung trang web mẫu dưới dạng Markdown sạch mã thừa.</p>
+
+      <h4 style="color:#38bdf8; margin:20px 0 8px 0;">🔹 Trường hợp B: Bạn có file spec/yêu cầu dạng PDF hoặc hình ảnh</h4>
+      <p style="font-size:0.875rem; color:#cbd5e1; margin:0;"><b>Công cụ sử dụng:</b> <code>OpenDataLoader PDF</code> (Top 1 PDF Parser)</p>
+      <div class="vibe-code-block">pip install opendataloader-pdf<br/>opendataloader-pdf convert document.pdf --output spec.md</div>
+      <p style="font-size:0.85rem; color:#94a3b8;">➡️ Gom 2 file <code>context.md</code> và <code>spec.md</code> để sẵn trong thư mục dự án.</p>
+    </div>
+
+    <!-- BƯỚC 2 -->
+    <div class="vibe-step-box">
+      <div class="vibe-step-title">
+        <span class="vibe-badge">BƯỚC 2</span>
+        2. Thiết Lập Kỷ Luật &amp; Quy Trình Cho AI (Agent Governance)
+      </div>
+      <p style="color:#94a3b8; font-size:0.95rem; line-height:1.6;"><b>Mục tiêu:</b> Khóa AI vào khung kỹ thuật chuẩn Senior Engineer của Google, bắt AI phải lập kế hoạch (Plan) và chờ duyệt trước khi gõ bất kỳ dòng code nào.</p>
+      <p style="font-size:0.875rem; color:#cbd5e1; margin:0;"><b>Công cụ sử dụng:</b> <code>agent-skills</code> (Addy Osmani - Google Chrome Lead) &amp; <code>superpowers</code> (obra - 204K⭐)</p>
+      
+      <h4 style="color:#fbbf24; margin:16px 0 8px 0;">💬 Câu Prompt Mẫu Ép AI Lập Kế Hoạch (Copy &amp; Paste vào AI):</h4>
+      <div class="vibe-prompt-quote">"Bạn là Senior Lead Engineer. Hãy tuân thủ bộ quy trình 6 bước trong agent-skills (Define Spec → Plan → Build → Verify → Review → Ship). Dựa vào ngữ cảnh file spec.md ở trên, hãy viết cho tôi file IMPLEMENTATION_PLAN.md chi tiết các module cần làm. KHÔNG ĐƯỢC VIẾT CODE NGAY cho đến khi tôi duyệt PLAN!"</div>
+      <p style="font-size:0.85rem; color:#94a3b8;">➡️ Đọc qua <code>IMPLEMENTATION_PLAN.md</code> AI tạo ra, sửa đổi nếu cần rồi mới gõ: <b>"Kế hoạch đã duyệt, hãy chuyển sang bước Build!"</b></p>
+    </div>
+
+    <!-- BƯỚC 3 -->
+    <div class="vibe-step-box">
+      <div class="vibe-step-title">
+        <span class="vibe-badge">BƯỚC 3</span>
+        3. Thiết Kế Giao Diện &amp; Trải Nghiệm UI/UX (Design Director)
+      </div>
+      <p style="color:#94a3b8; font-size:0.95rem; line-height:1.6;"><b>Mục tiêu:</b> Đảm bảo giao diện cực kỳ hiện đại, thẩm mỹ cao (Vibrant Colors, Dark Mode, Glassmorphism, Responsive) thay vì màu xám đơn điệu mặc định của AI.</p>
+      <p style="font-size:0.875rem; color:#cbd5e1; margin:0;"><b>Công cụ sử dụng:</b> <code>ui-ux-pro-max-skill</code> (92K⭐ Top 1 UI Design Intelligence)</p>
+
+      <h4 style="color:#fbbf24; margin:16px 0 8px 0;">💬 Câu Prompt Mẫu Kích Hoạt Design Intelligence:</h4>
+      <div class="vibe-prompt-quote">"Áp dụng nguyên lý của ui-ux-pro-max-skill, hãy thiết kế cho tôi bộ Design Tokens gồm: Bảng màu HSL chủ đạo (Neon/Dark Mode), Font chữ Google Fonts (Inter/Outfit), độ cong bo góc border-radius, hiệu ứng bóng đổ shadow &amp; hiệu ứng chuyển động micro-animation. Tạo file index.css hoặc styles.css trước!"</div>
+    </div>
+
+    <!-- BƯỚC 4 -->
+    <div class="vibe-step-box">
+      <div class="vibe-step-title">
+        <span class="vibe-badge">BƯỚC 4</span>
+        4. Vibe Coding, Chạy Test &amp; Tái Cấu Trúc Code (Build, Test &amp; Refactor)
+      </div>
+      <p style="color:#94a3b8; font-size:0.95rem; line-height:1.6;"><b>Mục tiêu:</b> Viết code tính năng mượt mà, kiểm thử tự động và tự dọn dẹp code khi dự án phình to.</p>
+      
+      <h4 style="color:#38bdf8; margin:16px 0 8px 0;">🔹 Thao tác A: Khi sinh code tính năng</h4>
+      <p style="font-size:0.875rem; color:#cbd5e1; margin:0;"><b>Công cụ sử dụng:</b> <code>claude-code-harness</code> &amp; <code>karpathy/nanoGPT</code> (AutoResearch)</p>
+      <div class="vibe-prompt-quote">"Hãy viết mã nguồn tính năng [Tên tính năng] dựa trên Design System ở Bước 3. Viết kèm Unit Test và chạy kiểm thử tự động qua Harness môi trường để đảm bảo không có lỗi runtime."</div>
+
+      <h4 style="color:#38bdf8; margin:20px 0 8px 0;">🔹 Thao tác B: Khi dự án vượt quá 500 dòng code hoặc bắt đầu rối rắm</h4>
+      <p style="font-size:0.875rem; color:#cbd5e1; margin:0;"><b>Công cụ sử dụng:</b> <code>refactoringhq/tolaria</code> (Top 1 Refactoring AI)</p>
+      <div class="vibe-prompt-quote">"Dự án bắt đầu lớn. Áp dụng kỹ thuật Tolaria Refactoring, hãy bóc tách file này thành các module độc lập, loại bỏ code trùng lặp và tối ưu lại cấu trúc thư mục."</div>
+    </div>
+
+    <!-- BƯỚC 5 -->
+    <div class="vibe-step-box">
+      <div class="vibe-step-title">
+        <span class="vibe-badge">BƯỚC 5</span>
+        5. Rà Soát Bảo Mật &amp; Ship Sản Phẩm (Security Audit &amp; Ship)
+      </div>
+      <p style="color:#94a3b8; font-size:0.95rem; line-height:1.6;"><b>Mục tiêu:</b> Đảm bảo ứng dụng web hoặc tool của bạn an toàn 100% trước các đợt tấn công mạng trước khi triển khai công khai.</p>
+      <p style="font-size:0.875rem; color:#cbd5e1; margin:0;"><b>Công cụ sử dụng:</b> <code>PentesterFlow Agent</code>, <code>Z4nzu/hackingtool</code> &amp; <code>cr0hn/dockerscan</code></p>
+      
+      <div class="vibe-code-block">
+        # 1. Quét lỗ hổng Web App (IDOR, SSRF, XSS)<br/>
+        npx pentesterflow scan http://localhost:8000<br/><br/>
+        # 2. Nếu có Docker: Quét lỗ hổng Container<br/>
+        dockerscan image verify my-app:latest
+      </div>
+      <p style="font-size:0.85rem; color:#94a3b8;">➡️ Đưa báo cáo lỗi bảo mật cho AI fix ngay lập tức. Sau đó chạy <code>git commit</code> và SHIP lên Vercel / Netlify / Server!</p>
+    </div>
+
+    <!-- BOTTOM RETURN BUTTON -->
+    
+    <!-- CHEAT SHEET TABLE -->
+    <div class="vibe-step-box" style="border-color: rgba(251, 191, 36, 0.4); background: rgba(30, 41, 59, 0.85);">
+      <div class="vibe-step-title" style="color: #fbbf24;">
+        <span class="vibe-badge" style="background: rgba(251, 191, 36, 0.2); color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">CHEATSHEET</span>
+        💡 Bảng Cheat Sheet Câu Prompt Mẫu Cho Mỗi Bước
+      </div>
+      <p style="color:#94a3b8; font-size:0.9rem; margin-bottom:16px;">Copy &amp; Paste các câu lệnh mẫu này trực tiếp cho AI Agent ở từng giai đoạn phát triển:</p>
+      
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.875rem; color:#cbd5e1;">
+          <thead>
+            <tr style="background:rgba(255,255,255,0.06); border-bottom:2px solid rgba(255,255,255,0.1);">
+              <th style="padding:12px 14px; color:#fbbf24; font-weight:800; width:15%;">Giai Đoạn</th>
+              <th style="padding:12px 14px; color:#fbbf24; font-weight:800; width:85%;">Lệnh Prompt Mẫu (Copy &amp; Paste)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+              <td style="padding:12px 14px; font-weight:700; color:#00f2fe;">BƯỚC 1</td>
+              <td style="padding:12px 14px; font-family:monospace; color:#38bdf8;">"Đây là dữ liệu spec từ file context.md cào bằng Firecrawl và spec.md bóc từ OpenDataLoader PDF. Hãy đọc và tóm tắt yêu cầu cốt lõi."</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+              <td style="padding:12px 14px; font-weight:700; color:#00f2fe;">BƯỚC 2</td>
+              <td style="padding:12px 14px; font-family:monospace; color:#38bdf8;">"Tuân thủ agent-skills (Google), hãy lập IMPLEMENTATION_PLAN.md 6 bước. Chưa được code cho đến khi tôi duyệt!"</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+              <td style="padding:12px 14px; font-weight:700; color:#00f2fe;">BƯỚC 3</td>
+              <td style="padding:12px 14px; font-family:monospace; color:#38bdf8;">"Áp dụng ui-ux-pro-max-skill, tạo hệ thống CSS Design Tokens: Dark mode, Gradient mượt, Google Fonts Inter, micro-animations."</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+              <td style="padding:12px 14px; font-weight:700; color:#00f2fe;">BƯỚC 4</td>
+              <td style="padding:12px 14px; font-family:monospace; color:#38bdf8;">"Tạo tính năng A. Dùng claude-code-harness kiểm thử. Nếu code phình to >500 dòng, dùng tolaria để refactor module."</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 14px; font-weight:700; color:#00f2fe;">BƯỚC 5</td>
+              <td style="padding:12px 14px; font-family:monospace; color:#38bdf8;">"Rà soát lại toàn bộ code theo checklist PentesterFlow &amp; dockerscan. Đảm bảo không bị dính XSS, SSRF hay leak API Key."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+<div style="text-align:center; margin-top:40px;">
+      <a href="../../index.html" style="display:inline-block; padding:12px 30px; border-radius:30px; background:linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); color:#fff; font-weight:800; text-decoration:none; box-shadow:0 6px 20px rgba(0,242,254,0.4);">Trở về Trang chủ &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="Footer_footer__UaG1g" style="margin-top:60px; padding:30px; border-top:1px solid rgba(255,255,255,0.1); text-align:center; color:#94a3b8;">
+    <p>© 2026 Trungvt.co · Sổ Tay Vibe Coding Thực Chiến</p>
+  </footer>
+</body></html>
