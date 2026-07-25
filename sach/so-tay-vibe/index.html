@@ -89,4 +89,48 @@
 
 <footer class="Footer_footer__UaG1g"><a class="Footer_brand___zP6t" href="../../index.html"><span class="Logo_lockup__DjkOB Logo_sm__82urK"><span class="Logo_learning__zJhMj">Trung</span><span class="Logo_ai__6l5Xv">vt</span><span class="Logo_vn__foqO1">co</span></span></a><div class="Footer_nav__DEri8"><a class="Footer_link__EWWOW" href="../../index.html">Trang chủ</a><a class="Footer_link__EWWOW" href="index.html">Sổ tay Vibe</a><a class="Footer_link__EWWOW" href="../../sach/index.html">Sách</a><a class="Footer_link__EWWOW" href="https://thu-vien-52-prompt.vercel.app/" target="_blank" rel="noopener noreferrer">52 System Prompt</a></div><p class="Footer_contact__Qek_T">Zalo Liên hệ: <a class="Footer_contactLink__ZkhIE" href="https://zalo.me/0836384168" target="_blank" rel="noopener noreferrer">0836384168</a></p><span class="Footer_copyright__j5CNb">© 2026 Trungvt</span></footer>
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(self.__next_f=self.__next_f||[]).push([0])</script>
+
+<script>
+  (function() {
+    // 1. Initial theme load
+    var savedTheme = localStorage.getItem('reader-theme');
+    var isDark = savedTheme ? (savedTheme === 'dark') : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+
+    // 2. Darkmode Toggle button listener
+    document.addEventListener('DOMContentLoaded', function() {
+      var darkBtn = document.querySelector('.reader_darkToggle__fe_JD');
+      if (darkBtn) {
+        darkBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        darkBtn.addEventListener('click', function() {
+          var currentTheme = document.documentElement.getAttribute('data-theme');
+          var newIsDark = currentTheme !== 'dark';
+          if (newIsDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('reader-theme', 'dark');
+            darkBtn.setAttribute('aria-pressed', 'true');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('reader-theme', 'light');
+            darkBtn.setAttribute('aria-pressed', 'false');
+          }
+        });
+      }
+
+      // 3. Toc trigger drawer listener for mobile/collapsible sidebar
+      var tocBtn = document.querySelector('.reader_tocTrigger__kx6Zs');
+      var grid = document.querySelector('.reader_grid__jzzrU');
+      if (tocBtn && grid) {
+        tocBtn.addEventListener('click', function() {
+          grid.classList.toggle('reader_gridCollapsed__4Vxmv');
+        });
+      }
+    });
+  })();
+</script>
+
 </body></html>
