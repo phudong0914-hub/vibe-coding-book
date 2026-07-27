@@ -105,7 +105,7 @@
 <h2 class="readerBody_subhead__fsVE_" id="tong-quan">1. Tổng Quan &amp; Nguyên Tắc Cốt Lõi</h2>
 <p class="readerBody_paragraph__yI4m6"><span>Playbook này giúp bạn dùng AI coding agents như Codex, Claude Code, Cursor hoặc các agent tương tự một cách có kỷ luật hơn: vẫn giữ tốc độ vibe coding, nhưng có ngữ cảnh sạch, kế hoạch rõ, giao diện tốt, code dễ sửa, kiểm thử được và giảm rủi ro trước khi triển khai.</span></p>
 
-<div style="background: rgba(0, 242, 254, 0.08); border-left: 4px solid #00f2fe; padding: 1rem 1.25rem; border-radius: 8px; margin: 1.5rem 0;">
+<div class="vibe-alert-block">
   <p class="readerBody_paragraph__yI4m6" style="margin: 0;"><span><strong>Công thức tổng quát:</strong> Reference → Context sạch → Product Spec → Implementation Plan → Design System → Build từng milestone → Verify/Refactor → Security Audit → Ship.</span></p>
 </div>
 
@@ -179,10 +179,10 @@
 <h2 class="readerBody_subhead__fsVE_" id="mengto-skills">3. Cách Áp Dụng MengTo/Skills Hiệu Quả</h2>
 <p class="readerBody_paragraph__yI4m6"><span>MengTo/Skills là thư viện skill dạng Markdown hỗ trợ AI coding agent. Không nên nhồi toàn bộ repo vào context, hãy chọn đúng skill hẹp nhất cho tác vụ hiện tại.</span></p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.25rem 0;">
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+<div class="vibe-grid">
+  <div class="vibe-checklist-card">
     <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Khi Clone/Recreate Website Mẫu</h4>
-    <ul style="padding-left: 1.25rem; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem;">
+    <ul class="vibe-checklist-list">
       <li><code>codex/stitched-full-page-capture</code>: Chụp toàn bộ trang dài.</li>
       <li><code>codex/video-to-superprompt</code>: Chuyển video scroll thành prompt.</li>
       <li><code>codex/html-to-interaction-prompts</code>: Tách HTML thành prompt nhỏ.</li>
@@ -191,9 +191,9 @@
     </ul>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+  <div class="vibe-checklist-card">
     <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Khi Làm Giao Diện Web/App Hiện Đại</h4>
-    <ul style="padding-left: 1.25rem; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem;">
+    <ul class="vibe-checklist-list">
       <li><code>web-design/tailwindcss</code>: Giữ UI gọn, dễ bảo trì.</li>
       <li><code>web-design/gsap</code>: Kiểm soát timeline animation phức tạp.</li>
       <li><code>web-design/animation-on-scroll</code>: Hiệu ứng cuộn trang.</li>
@@ -203,7 +203,7 @@
   </div>
 </div>
 
-<div style="background: rgba(0, 242, 254, 0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0; border: 1px solid rgba(0, 242, 254, 0.2);">
+<div class="vibe-alert-block-secondary">
   <p style="font-weight:700; margin-bottom: 0.3rem; color: var(--accent);">⚡ Công thức dùng skill 7 bước:</p>
   <p style="margin: 0;">1. Chọn skill hẹp → 2. Đọc SKILL.md → 3. Tạo spec ngắn → 4. Build milestone → 5. Verify trình duyệt → 6. Audit kết quả → 7. Polish có kiểm soát.</p>
 </div>
@@ -213,9 +213,9 @@
 <!-- PHẦN 4: KHO MÃ NGUỒN MỞ TINH NHUỆ -->
 <h2 class="readerBody_subhead__fsVE_" id="kho-ma-nguon-open-source">4. Kho Mã Nguồn Mở Tinh Nhuệ (Top 1 Ultimate Stack)</h2>
 
-<div id="repo-banner-tabs" style="background: linear-gradient(135deg, rgba(0, 242, 254, 0.08) 0%, rgba(26, 31, 46, 0.95) 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+<div id="repo-banner-tabs" class="vibe-banner">
   <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
-    <div style="background: #00f2fe; color: #000; font-weight: 800; font-size: 1.5rem; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0,242,254,0.4);">
+    <div class="vibe-icon-wrapper vibe-icon-cyan">
       🥞
     </div>
     <div>
@@ -225,62 +225,62 @@
   </div>
 
   <!-- BADGE PILLS WITH INTERACTIVE SCROLL -->
-  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-    <a href="#repo-group-1" style="text-decoration: none; background: rgba(0, 242, 254, 0.15); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+  <div class="vibe-pill-scroll">
+    <a href="#repo-group-1" class="vibe-badge-pill vibe-badge-pill-cyan">
       <span style="width: 8px; height: 8px; background: #00f2fe; border-radius: 50%;"></span> 18 Repo Tinh Nhuệ (Chi tiết)
     </a>
-    <a href="#repo-backup-group" style="text-decoration: none; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #e2e8f0; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+    <a href="#repo-backup-group" class="vibe-badge-pill vibe-badge-pill-gray">
       📦 29 Repo Dự Phòng (Chi tiết)
     </a>
   </div>
 
-  <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-    <a href="#repo-group-1" style="text-decoration: none; background: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.2); color: #00f2fe; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🏆 Top 1 Senior Engineer &amp; Skills</a>
-    <a href="#repo-group-2" style="text-decoration: none; background: rgba(56, 161, 105, 0.1); border: 1px solid rgba(56, 161, 105, 0.3); color: #48bb78; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🌐 Top 1 PDF &amp; Web RAG</a>
-    <a href="#repo-group-3" style="text-decoration: none; background: rgba(159, 122, 234, 0.1); border: 1px solid rgba(159, 122, 234, 0.3); color: #b794f4; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🎨 Top 1 UI Design &amp; PPT</a>
-    <a href="#repo-group-4" style="text-decoration: none; background: rgba(229, 62, 62, 0.1); border: 1px solid rgba(229, 62, 62, 0.3); color: #f56565; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Tool)</a>
-    <a href="#repo-backup-group" style="text-decoration: none; background: rgba(237, 137, 54, 0.1); border: 1px solid rgba(237, 137, 54, 0.3); color: #ed8936; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">📦 Kho Lưu Trữ Dự Phòng (29)</a>
+  <div class="vibe-pills-row">
+    <a href="#repo-group-1" class="vibe-pill-link vibe-pill-link-cyan">🏆 Top 1 Senior Engineer &amp; Skills</a>
+    <a href="#repo-group-2" class="vibe-pill-link vibe-pill-link-green">🌐 Top 1 PDF &amp; Web RAG</a>
+    <a href="#repo-group-3" class="vibe-pill-link vibe-pill-link-purple">🎨 Top 1 UI Design &amp; PPT</a>
+    <a href="#repo-group-4" class="vibe-pill-link vibe-pill-link-red">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Tool)</a>
+    <a href="#repo-backup-group" class="vibe-pill-link vibe-pill-link-orange">📦 Kho Lưu Trữ Dự Phòng (29)</a>
   </div>
 </div>
 
 <!-- CHI TIẾT BẢNG CARDS CHO NHÓM 1 -->
-<div id="repo-group-1" style="background: rgba(0, 242, 254, 0.03); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+<div id="repo-group-1" class="vibe-container vibe-container-cyan">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-    <h3 style="margin: 0; color: #00f2fe; font-size: 1.2rem; font-weight: 800;">🏆 Top 1 Senior Engineer &amp; Agent Skills (Vũ Khí Lập Trình)</h3>
-    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
+    <h3 style="margin: 0;" class="vibe-section-title vibe-label-cyan">🏆 Top 1 Senior Engineer &amp; Agent Skills (Vũ Khí Lập Trình)</h3>
+    <a href="#repo-banner-tabs" class="vibe-back-link">⬆️ Quay về Tab Banner</a>
   </div>
   <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #cbd5e0;">5 Repo vô địch về quy trình Senior Engineer, Claude Superpowers, Refactoring &amp; AutoML:</p>
   
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+  <div class="vibe-grid">
+    <div class="vibe-card vibe-card-cyan">
       <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">⭐ 43.1K Stars (Google)</div>
       <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Quy trình Senior Engineer (Google Chrome Lead)</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ 23 skill Markdown đóng gói quy trình Senior Engineer tại Google cho AI Code Agent (6 bước: Define → Plan → Build → Verify → Review → Ship).</p>
       <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
     </div>
 
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-cyan">
       <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">⭐ 204K+ Stars (Top 1)</div>
       <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Claude Superpowers Framework (obra)</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Skill collection thành công nhất hệ sinh thái. Biến Claude Code thành Engineering Partner chuyên nghiệp (Brainstorming → Planning → TDD → Review).</p>
       <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
     </div>
 
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-cyan">
       <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">Top 1 Test Harness</div>
       <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Harness &amp; Testing Environment (Chachamarul27)</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ khung kiểm thử tự động &amp; mô phỏng môi trường (Harness Environment) tối ưu riêng cho Claude Code CLI.</p>
       <a href="https://github.com/Chachamarul27/claude-code-harness" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
     </div>
 
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-cyan">
       <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">Top 1 Refactoring</div>
       <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Code Refactoring AI System (refactoringhq)</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Công cụ tự động hóa tái cấu trúc mã nguồn (Tolaria) thông minh dành cho các dự án phần mềm lớn.</p>
       <a href="https://github.com/refactoringhq/tolaria" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
     </div>
 
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-cyan">
       <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">Top 1 AutoML Research</div>
       <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 AutoResearch AutoML Agent (Andrej Karpathy)</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Chỉ 630 dòng Python: Agent tự nâng cấp code training, tự chạy ~100 thí nghiệm qua đêm trên 1 GPU.</p>
@@ -290,21 +290,21 @@
 </div>
 
 <!-- CHI TIẾT BẢNG CARDS CHO NHÓM 2 -->
-<div id="repo-group-2" style="background: rgba(56, 161, 105, 0.03); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+<div id="repo-group-2" class="vibe-container vibe-container-green">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-    <h3 style="margin: 0; color: #48bb78; font-size: 1.2rem; font-weight: 800;">🌐 Top 1 PDF &amp; Web Extraction (Dữ Liệu &amp; RAG Pipeline)</h3>
-    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
+    <h3 style="margin: 0;" class="vibe-section-title vibe-label-green">🌐 Top 1 PDF &amp; Web Extraction (Dữ Liệu &amp; RAG Pipeline)</h3>
+    <a href="#repo-banner-tabs" class="vibe-back-link">⬆️ Quay về Tab Banner</a>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 8px; padding: 1rem;">
+  <div class="vibe-grid">
+    <div class="vibe-card vibe-card-green">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 OpenDataLoader PDF Parser</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Công cụ bóc tách file PDF, bảng biểu phức tạp và văn bản dạng cột thành định dạng Markdown chuẩn cho LLM.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-green">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Firecrawl LLM Web Crawler</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Crawler chuyển đổi bất kỳ URL website nào thành Markdown sạch sẽ cho AI Agent đọc ngữ cảnh.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-green">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Crawl4AI Speed Crawler</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Crawler mã nguồn mở tốc độ cao tối ưu riêng cho RAG pipeline và AI Coding Agents.</p>
     </div>
@@ -312,25 +312,25 @@
 </div>
 
 <!-- CHI TIẾT BẢNG CARDS CHO NHÓM 3 -->
-<div id="repo-group-3" style="background: rgba(159, 122, 234, 0.03); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+<div id="repo-group-3" class="vibe-container vibe-container-purple">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-    <h3 style="margin: 0; color: #b794f4; font-size: 1.2rem; font-weight: 800;">🎨 Top 1 UI Design Intelligence &amp; Utilities</h3>
-    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
+    <h3 style="margin: 0;" class="vibe-section-title vibe-label-purple">🎨 Top 1 UI Design Intelligence &amp; Utilities</h3>
+    <a href="#repo-banner-tabs" class="vibe-back-link">⬆️ Quay về Tab Banner</a>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+  <div class="vibe-grid">
+    <div class="vibe-card vibe-card-purple">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 UI/UX Pro Max Skill</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ kỹ năng đóng vai Design Director giúp AI tư duy visual hierarchy, phối màu HSL và thiết kế sang trọng.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-purple">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 PPT Master Generator</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Công cụ tự động hóa khởi tạo slide bài thuyết trình bài bản từ outline ý tưởng.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-purple">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Recordly Screen Recorder</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Quay video màn hình chất lượng cao để làm tài liệu reference cho AI phân tích tương tác.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-purple">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 MengTo/Skills Repository</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Kho skill thiết kế giao diện web, Tailwind CSS, GSAP animation và 3D WebGL cực kỳ ấn tượng.</p>
     </div>
@@ -338,25 +338,25 @@
 </div>
 
 <!-- CHI TIẾT BẢNG CARDS CHO NHÓM 4 -->
-<div id="repo-group-4" style="background: rgba(229, 62, 62, 0.03); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+<div id="repo-group-4" class="vibe-container vibe-container-red">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-    <h3 style="margin: 0; color: #f56565; font-size: 1.2rem; font-weight: 800;">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Security Tools)</h3>
-    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
+    <h3 style="margin: 0;" class="vibe-section-title vibe-label-red">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Security Tools)</h3>
+    <a href="#repo-banner-tabs" class="vibe-back-link">⬆️ Quay về Tab Banner</a>
   </div>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+  <div class="vibe-grid">
+    <div class="vibe-card vibe-card-red">
       <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Z4nzu Hackingtool</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ công cụ rà soát an ninh mạng và kiểm thử xâm nhập tổng hợp.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-red">
       <h4 style="color: #fff; margin: 0 0 0.5rem 0;">🥇 PentesterFlow CLI Agent</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Agent dòng lệnh tự động kiểm tra lỗ hổng bảo mật phổ biến trước khi ship.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-red">
       <h4 style="color: #fff; margin: 0 0 0.5rem 0;">🥇 212 Red Team Skills</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ kỹ năng Red Team tấn công thử nghiệm dành cho AI Agents.</p>
     </div>
-    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+    <div class="vibe-card vibe-card-red">
       <h4 style="color: #fff; margin: 0 0 0.5rem 0;">🥇 GhidraGPT &amp; Dockerscan</h4>
       <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Plugin reverse engineering và rà soát an toàn cho Docker Container.</p>
     </div>
@@ -367,8 +367,8 @@
 <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 2rem; color: #ed8936;">📦 Kho Lưu Trữ Dự Phòng (29 Repo Mở Rộng)</h3>
 <p class="readerBody_paragraph__yI4m6"><span>Danh sách 29 công cụ &amp; thư viện bổ trợ dự phòng khi dự án phát sinh yêu cầu đặc thù về data, testing, automation hoặc AI agent mở rộng:</span></p>
 
-<div style="background: rgba(237, 137, 54, 0.04); border: 1px solid rgba(237, 137, 54, 0.2); border-radius: 10px; padding: 1.25rem; margin: 1rem 0;">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem; font-size: 0.88rem;">
+<div class="vibe-container vibe-container-orange">
+  <div class="vibe-backup-grid">
     <div>1. <strong>Playwright:</strong> End-to-end testing cho browser agent.</div>
     <div>2. <strong>Puppeteer:</strong> Automation &amp; screenshot tool.</div>
     <div>3. <strong>LangChain:</strong> Framework xây dựng LLM applications.</div>
@@ -407,42 +407,42 @@
 <h2 class="readerBody_subhead__fsVE_" id="cheatsheet-table">5. Cheat Sheet Prompt Nhanh Cho Từng Bước</h2>
 <p class="readerBody_paragraph__yI4m6"><span>Tóm tắt câu lệnh Prompt ngắn gọn có thể Copy &amp; Paste ngay ở từng giai đoạn:</span></p>
 
-<div style="overflow-x:auto; margin: 1.5rem 0;">
-  <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem;">
+<div class="vibe-table-wrapper">
+  <table class="vibe-table">
     <thead>
-      <tr style="border-bottom:2px solid var(--border);">
-        <th style="padding:10px; color:var(--accent); min-width:100px;">Giai Đoạn</th>
-        <th style="padding:10px; color:var(--accent);">Câu Prompt Nhanh (Copy &amp; Paste)</th>
+      <tr>
+        <th style="min-width:100px;">Giai Đoạn</th>
+        <th>Câu Prompt Nhanh (Copy &amp; Paste)</th>
       </tr>
     </thead>
     <tbody>
-      <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:10px; font-weight:700;">BƯỚC 1<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Context</span></td>
-        <td style="padding:10px;">"Đây là dữ liệu context từ website, PDF, ảnh chụp và ghi chú. Hãy đọc, làm sạch, tóm tắt yêu cầu cốt lõi và chỉ ra phần còn thiếu. Chưa code."</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:10px; font-weight:700;">BƯỚC 2<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Product Spec</span></td>
-        <td style="padding:10px;">"Hãy tạo PRODUCT_SPEC.md gồm: người dùng chính, vấn đề cần giải quyết, luồng chính, MVP scope, ngoài phạm vi v1, tiêu chí hoàn thành."</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:10px; font-weight:700;">BƯỚC 3<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Impl Plan</span></td>
-        <td style="padding:10px;">"Hãy tạo IMPLEMENTATION_PLAN.md theo vai trò Senior Engineer. Chia thành milestone nhỏ, mỗi milestone có output, file liên quan, cách verify và rủi ro."</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:10px; font-weight:700;">BƯỚC 4<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Design System</span></td>
-        <td style="padding:10px;">"Áp dụng MengTo/Skills phù hợp cho web-design. Tạo DESIGN_SYSTEM.md và CSS tokens. Ưu tiên visual hierarchy, responsive, spacing tốt, motion vừa đủ và giao diện không chung chung."</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:10px; font-weight:700;">BƯỚC 5<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Build</span></td>
-        <td style="padding:10px;">"Hoàn thành milestone tiếp theo. Không mở rộng ngoài scope. Sau khi code xong, chạy kiểm tra và báo lỗi runtime/build nếu có."</td>
-      </tr>
-      <tr style="border-bottom:1px solid var(--border);">
-        <td style="padding:10px; font-weight:700;">BƯỚC 6<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Review/Refactor</span></td>
-        <td style="padding:10px;">"Review code như senior reviewer. Tìm bug, duplication, component quá lớn và logic khó bảo trì. Refactor nhỏ, giữ nguyên behavior."</td>
+      <tr>
+        <td style="font-weight:700;">BƯỚC 1<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Context</span></td>
+        <td>"Đây là dữ liệu context từ website, PDF, ảnh chụp và ghi chú. Hãy đọc, làm sạch, tóm tắt yêu cầu cốt lõi và chỉ ra phần còn thiếu. Chưa code."</td>
       </tr>
       <tr>
-        <td style="padding:10px; font-weight:700;">BƯỚC 7<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Security/Ship</span></td>
-        <td style="padding:10px;">"Audit trước khi ship. Tập trung vào secret leak, XSS, unsafe input, dependency risk, API exposure và production build. Phân loại P0/P1/P2 và sửa P0/P1 trước."</td>
+        <td style="font-weight:700;">BƯỚC 2<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Product Spec</span></td>
+        <td>"Hãy tạo PRODUCT_SPEC.md gồm: người dùng chính, vấn đề cần giải quyết, luồng chính, MVP scope, ngoài phạm vi v1, tiêu chí hoàn thành."</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">BƯỚC 3<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Impl Plan</span></td>
+        <td>"Hãy tạo IMPLEMENTATION_PLAN.md theo vai trò Senior Engineer. Chia thành milestone nhỏ, mỗi milestone có output, file liên quan, cách verify và rủi ro."</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">BƯỚC 4<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Design System</span></td>
+        <td>"Áp dụng MengTo/Skills phù hợp cho web-design. Tạo DESIGN_SYSTEM.md và CSS tokens. Ưu tiên visual hierarchy, responsive, spacing tốt, motion vừa đủ và giao diện không chung chung."</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">BƯỚC 5<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Build</span></td>
+        <td>"Hoàn thành milestone tiếp theo. Không mở rộng ngoài scope. Sau khi code xong, chạy kiểm tra và báo lỗi runtime/build nếu có."</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">BƯỚC 6<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Review/Refactor</span></td>
+        <td>"Review code như senior reviewer. Tìm bug, duplication, component quá lớn và logic khó bảo trì. Refactor nhỏ, giữ nguyên behavior."</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700;">BƯỚC 7<br/><span style="font-size:0.8rem; font-weight:normal; color:#888;">Security/Ship</span></td>
+        <td>"Audit trước khi ship. Tập trung vào secret leak, XSS, unsafe input, dependency risk, API exposure và production build. Phân loại P0/P1/P2 và sửa P0/P1 trước."</td>
       </tr>
     </tbody>
   </table>
@@ -454,11 +454,11 @@
 <h2 class="readerBody_subhead__fsVE_" id="prompt-mau-copy">6. Prompt Mẫu Chi Tiết Có Thể Copy</h2>
 <p class="readerBody_paragraph__yI4m6"><span>Bộ Prompt Mẫu chi tiết nguyên văn dành cho AI Coding Agent trong từng giai đoạn:</span></p>
 
-<div style="display: flex; flex-direction: column; gap: 1.25rem; margin: 1.5rem 0;">
+<div class="vibe-copy-card-container" style="display:flex; flex-direction:column; gap:1.25rem; margin:1.5rem 0;">
 
-  <div style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 8px; padding: 1.25rem;">
-    <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🔥 Master Prompt Cho Dự Án Mới</h3>
-    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Tôi muốn làm dự án này theo quy trình vibe coding senior.
+  <div class="vibe-copy-card" style="background: rgba(0, 242, 254, 0.05); border-color: rgba(0, 242, 254, 0.3); margin-top: 0;">
+    <h3 class="vibe-copy-title">🔥 Master Prompt Cho Dự Án Mới</h3>
+    <pre class="vibe-code-block" style="margin: 0;">Tôi muốn làm dự án này theo quy trình vibe coding senior.
 
 Hãy làm theo thứ tự:
 1. Đọc context/reference.
@@ -473,9 +473,9 @@ Hãy làm theo thứ tự:
 Không làm quá rộng. Ưu tiên bản chạy được, đẹp, dễ sửa, rồi polish dần.</pre>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">📄 Prompt Tạo Spec</h3>
-    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Đọc toàn bộ context. Tóm tắt:
+  <div class="vibe-checklist-card">
+    <h3 class="vibe-copy-title">📄 Prompt Tạo Spec</h3>
+    <pre class="vibe-code-block" style="margin: 0;">Đọc toàn bộ context. Tóm tắt:
 1. Mục tiêu sản phẩm
 2. User chính
 3. Tính năng bắt buộc
@@ -486,18 +486,18 @@ Không làm quá rộng. Ưu tiên bản chạy được, đẹp, dễ sửa, r�
 Sau đó tạo PRODUCT_SPEC.md. Chưa code.</pre>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🗺️ Prompt Tạo Plan</h3>
-    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Bạn là Senior Lead Engineer.
+  <div class="vibe-checklist-card">
+    <h3 class="vibe-copy-title">🗺️ Prompt Tạo Plan</h3>
+    <pre class="vibe-code-block" style="margin: 0;">Bạn là Senior Lead Engineer.
 Dựa trên PRODUCT_SPEC.md, lập IMPLEMENTATION_PLAN.md.
 Chia thành milestone nhỏ có thể chạy được.
 Mỗi milestone cần có output, file chính cần sửa, cách verify và rủi ro.
 Chưa code cho đến khi plan rõ.</pre>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🎨 Prompt Tạo Design System</h3>
-    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Áp dụng tinh thần MengTo/Skills cho UI/web-design.
+  <div class="vibe-checklist-card">
+    <h3 class="vibe-copy-title">🎨 Prompt Tạo Design System</h3>
+    <pre class="vibe-code-block" style="margin: 0;">Áp dụng tinh thần MengTo/Skills cho UI/web-design.
 Tạo DESIGN_SYSTEM.md và CSS tokens gồm:
 - màu chủ đạo và màu phụ
 - typography scale
@@ -511,9 +511,9 @@ Tạo DESIGN_SYSTEM.md và CSS tokens gồm:
 Tránh UI xám mặc định. Ưu tiên hierarchy rõ, đọc dễ, đẹp và dùng được.</pre>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🛡️ Prompt Audit Trước Khi Ship</h3>
-    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Audit dự án trước khi ship.
+  <div class="vibe-checklist-card">
+    <h3 class="vibe-copy-title">🛡️ Prompt Audit Trước Khi Ship</h3>
+    <pre class="vibe-code-block" style="margin: 0;">Audit dự án trước khi ship.
 Tập trung vào:
 - lỗi runtime/build
 - responsive và text overlap
@@ -534,37 +534,37 @@ Phân loại P0/P1/P2. Sửa P0 và P1 trước.</pre>
 <h2 class="readerBody_subhead__fsVE_" id="checklist-truoc-khi-ship">7. Checklist Kiểm Tra Trước Khi Ship</h2>
 <p class="readerBody_paragraph__yI4m6"><span>Bảng kiểm tra 4 khía cạnh tiêu chuẩn sản phẩm trước khi đưa ra người dùng thật:</span></p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">📦 Product</h4>
-    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+<div class="vibe-checklist-group">
+  <div class="vibe-checklist-card">
+    <h4 class="vibe-checklist-title">📦 Product</h4>
+    <ul class="vibe-checklist-list">
       <li>Luồng chính dùng được từ đầu tới cuối.</li>
       <li>CTA, form, navigation và trạng thái lỗi rõ ràng.</li>
       <li>Không còn placeholder gây hiểu nhầm.</li>
     </ul>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">🎨 UI/UX</h4>
-    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+  <div class="vibe-checklist-card">
+    <h4 class="vibe-checklist-title">🎨 UI/UX</h4>
+    <ul class="vibe-checklist-list">
       <li>Desktop và mobile không vỡ layout.</li>
       <li>Text không tràn, không chồng lên nhau.</li>
       <li>Motion có ích, không làm trang nặng.</li>
     </ul>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">💻 Code</h4>
-    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+  <div class="vibe-checklist-card">
+    <h4 class="vibe-checklist-title">💻 Code</h4>
+    <ul class="vibe-checklist-list">
       <li>Build production thành công.</li>
       <li>Component lớn đã được tách hợp lý.</li>
       <li>Không có console error quan trọng.</li>
     </ul>
   </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">🔒 Security</h4>
-    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+  <div class="vibe-checklist-card">
+    <h4 class="vibe-checklist-title">🔒 Security</h4>
+    <ul class="vibe-checklist-list">
       <li>Không leak API key hoặc file .env.</li>
       <li>Input được validate.</li>
       <li>Không render HTML user nhập một cách unsafe.</li>

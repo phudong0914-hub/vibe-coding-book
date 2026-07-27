@@ -1,0 +1,392 @@
+/* Vibe Coding Playbook Stylesheet */
+
+/* Grid container for cards */
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.vibe-banner {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.08) 0%, rgba(26, 31, 46, 0.95) 100%);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.vibe-grid-cols-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .vibe-grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Common container box stylings */
+.vibe-container {
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  scroll-margin-top: 80px;
+}
+
+.vibe-container-cyan {
+  background: rgba(0, 242, 254, 0.03);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.vibe-container-green {
+  background: rgba(56, 161, 105, 0.03);
+  border: 1px solid rgba(56, 161, 105, 0.2);
+}
+
+.vibe-container-purple {
+  background: rgba(159, 122, 234, 0.03);
+  border: 1px solid rgba(159, 122, 234, 0.2);
+}
+
+.vibe-container-red {
+  background: rgba(229, 62, 62, 0.03);
+  border: 1px solid rgba(229, 62, 62, 0.2);
+}
+
+.vibe-container-orange {
+  background: rgba(237, 137, 54, 0.04);
+  border: 1px solid rgba(237, 137, 54, 0.2);
+}
+
+/* Card components inside sections */
+.vibe-card {
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vibe-card:hover {
+  transform: translateY(-2px);
+}
+
+.vibe-card-cyan {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+}
+.vibe-card-cyan:hover {
+  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.15);
+}
+
+.vibe-card-green {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56, 161, 105, 0.2);
+}
+.vibe-card-green:hover {
+  box-shadow: 0 4px 20px rgba(56, 161, 105, 0.15);
+}
+
+.vibe-card-purple {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(159, 122, 234, 0.2);
+}
+.vibe-card-purple:hover {
+  box-shadow: 0 4px 20px rgba(159, 122, 234, 0.15);
+}
+
+.vibe-card-red {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(229, 62, 62, 0.2);
+}
+.vibe-card-red:hover {
+  box-shadow: 0 4px 20px rgba(229, 62, 62, 0.15);
+}
+
+/* General helper classes */
+.vibe-icon-wrapper {
+  color: #000;
+  font-weight: 800;
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vibe-icon-cyan {
+  background: #00f2fe;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.vibe-pill-scroll {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.vibe-badge-pill {
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vibe-badge-pill-cyan {
+  background: rgba(0, 242, 254, 0.15);
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+}
+.vibe-badge-pill-cyan:hover {
+  background: rgba(0, 242, 254, 0.25);
+  transform: translateY(-1px);
+}
+
+.vibe-badge-pill-gray {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+}
+.vibe-badge-pill-gray:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.vibe-pills-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.vibe-pill-link {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.vibe-pill-link:hover {
+  transform: translateY(-1px);
+}
+
+.vibe-pill-link-cyan {
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  color: #00f2fe;
+}
+.vibe-pill-link-cyan:hover {
+  background: rgba(0, 242, 254, 0.18);
+}
+
+.vibe-pill-link-green {
+  background: rgba(56, 161, 105, 0.1);
+  border: 1px solid rgba(56, 161, 105, 0.3);
+  color: #48bb78;
+}
+.vibe-pill-link-green:hover {
+  background: rgba(56, 161, 105, 0.2);
+}
+
+.vibe-pill-link-purple {
+  background: rgba(159, 122, 234, 0.1);
+  border: 1px solid rgba(159, 122, 234, 0.3);
+  color: #b794f4;
+}
+.vibe-pill-link-purple:hover {
+  background: rgba(159, 122, 234, 0.2);
+}
+
+.vibe-pill-link-red {
+  background: rgba(229, 62, 62, 0.1);
+  border: 1px solid rgba(229, 62, 62, 0.3);
+  color: #f56565;
+}
+.vibe-pill-link-red:hover {
+  background: rgba(229, 62, 62, 0.2);
+}
+
+.vibe-pill-link-orange {
+  background: rgba(237, 137, 54, 0.1);
+  border: 1px solid rgba(237, 137, 54, 0.3);
+  color: #ed8936;
+}
+.vibe-pill-link-orange:hover {
+  background: rgba(237, 137, 54, 0.2);
+}
+
+/* Headings and labels */
+.vibe-section-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.vibe-label-cyan { color: #00f2fe; }
+.vibe-label-green { color: #48bb78; }
+.vibe-label-purple { color: #b794f4; }
+.vibe-label-red { color: #f56565; }
+.vibe-label-orange { color: #ed8936; }
+
+.vibe-back-link {
+  color: #a0aec0;
+  font-size: 0.85rem;
+  text-decoration: none;
+  background: rgba(255,255,255,0.05);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.vibe-back-link:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* Layout for Backup 29 Repos */
+.vibe-backup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+  font-size: 0.88rem;
+}
+
+/* Custom Alert / Notice Blocks */
+.vibe-alert-block {
+  background: rgba(0, 242, 254, 0.08);
+  border-left: 4px solid #00f2fe;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.vibe-alert-block-secondary {
+  background: rgba(0, 242, 254, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+/* Cheat Sheet Table Stylings */
+.vibe-table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.vibe-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.vibe-table th {
+  padding: 10px;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+}
+
+.vibe-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+/* Prompt Copy Card Components */
+.vibe-copy-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.vibe-copy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.vibe-copy-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.vibe-copy-btn {
+  background: rgba(0, 242, 254, 0.15);
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vibe-copy-btn:hover {
+  background: #00f2fe;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.vibe-code-block {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.25rem;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Checklist Group Component */
+.vibe-checklist-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.vibe-checklist-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.vibe-checklist-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.vibe-checklist-list {
+  padding-left: 1.25rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
