@@ -184,7 +184,7 @@
 <!-- PHẦN 4: KHO MÃ NGUỒN MỞ TINH NHUỆ -->
 <h2 class="readerBody_subhead__fsVE_" id="kho-ma-nguon-open-source">4. Kho Mã Nguồn Mở Tinh Nhuệ (Top 1 Ultimate Stack)</h2>
 
-<div style="background: linear-gradient(135deg, rgba(0, 242, 254, 0.08) 0%, rgba(26, 31, 46, 0.95) 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+<div id="repo-banner-tabs" style="background: linear-gradient(135deg, rgba(0, 242, 254, 0.08) 0%, rgba(26, 31, 46, 0.95) 100%); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
   <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
     <div style="background: #00f2fe; color: #000; font-weight: 800; font-size: 1.5rem; width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0,242,254,0.4);">
       🥞
@@ -195,86 +195,146 @@
     </div>
   </div>
 
-  <!-- BADGE PILLS -->
+  <!-- BADGE PILLS WITH INTERACTIVE SCROLL -->
   <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
-    <span style="background: rgba(0, 242, 254, 0.15); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;">
-      <span style="width: 8px; height: 8px; background: #00f2fe; border-radius: 50%;"></span> 18 Repo Tinh Nhuệ
-    </span>
-    <span style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #e2e8f0; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;">
-      📦 29 Repo Dự Phòng
-    </span>
+    <a href="#repo-group-1" style="text-decoration: none; background: rgba(0, 242, 254, 0.15); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+      <span style="width: 8px; height: 8px; background: #00f2fe; border-radius: 50%;"></span> 18 Repo Tinh Nhuệ (Chi tiết)
+    </a>
+    <a href="#repo-backup-group" style="text-decoration: none; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #e2e8f0; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+      📦 29 Repo Dự Phòng (Chi tiết)
+    </a>
   </div>
 
   <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-    <span style="background: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.2); color: #00f2fe; padding: 4px 10px; border-radius: 14px; font-size: 0.8rem;">🏆 Top 1 Senior Engineer &amp; Skills</span>
-    <span style="background: rgba(56, 161, 105, 0.1); border: 1px solid rgba(56, 161, 105, 0.3); color: #48bb78; padding: 4px 10px; border-radius: 14px; font-size: 0.8rem;">🌐 Top 1 PDF &amp; Web RAG</span>
-    <span style="background: rgba(159, 122, 234, 0.1); border: 1px solid rgba(159, 122, 234, 0.3); color: #b794f4; padding: 4px 10px; border-radius: 14px; font-size: 0.8rem;">🎨 Top 1 UI Design &amp; PPT</span>
-    <span style="background: rgba(229, 62, 62, 0.1); border: 1px solid rgba(229, 62, 62, 0.3); color: #f56565; padding: 4px 10px; border-radius: 14px; font-size: 0.8rem;">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Tool)</span>
-    <span style="background: rgba(237, 137, 54, 0.1); border: 1px solid rgba(237, 137, 54, 0.3); color: #ed8936; padding: 4px 10px; border-radius: 14px; font-size: 0.8rem;">📦 Kho Lưu Trữ Dự Phòng (29)</span>
+    <a href="#repo-group-1" style="text-decoration: none; background: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.2); color: #00f2fe; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🏆 Top 1 Senior Engineer &amp; Skills</a>
+    <a href="#repo-group-2" style="text-decoration: none; background: rgba(56, 161, 105, 0.1); border: 1px solid rgba(56, 161, 105, 0.3); color: #48bb78; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🌐 Top 1 PDF &amp; Web RAG</a>
+    <a href="#repo-group-3" style="text-decoration: none; background: rgba(159, 122, 234, 0.1); border: 1px solid rgba(159, 122, 234, 0.3); color: #b794f4; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🎨 Top 1 UI Design &amp; PPT</a>
+    <a href="#repo-group-4" style="text-decoration: none; background: rgba(229, 62, 62, 0.1); border: 1px solid rgba(229, 62, 62, 0.3); color: #f56565; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Tool)</a>
+    <a href="#repo-backup-group" style="text-decoration: none; background: rgba(237, 137, 54, 0.1); border: 1px solid rgba(237, 137, 54, 0.3); color: #ed8936; padding: 6px 12px; border-radius: 14px; font-size: 0.82rem; font-weight: 600; transition: all 0.2s;">📦 Kho Lưu Trữ Dự Phòng (29)</a>
   </div>
 </div>
 
-<h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 1.5rem; color: var(--accent);">🔥 18 Repo Tinh Nhuệ Vô Địch (Đã Tinh Lọc)</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0;">
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem;">Nhóm 1: Senior Engineering &amp; Agent Skills (5 Repo)</h4>
-    <ol style="padding-left: 1.25rem; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem;">
-      <li><strong>1. Agent Skills (Addy Osmani):</strong> Quy trình senior (Define → Plan → Build → Verify → Review → Ship).</li>
-      <li><strong>2. Claude Superpowers Framework (obra):</strong> Partner cho Brainstorming, planning, TDD &amp; review.</li>
-      <li><strong>3. Claude Code Harness:</strong> Khung kiểm thử &amp; mô phỏng môi trường chạy agent.</li>
-      <li><strong>4. Tolaria / Refactoring AI System:</strong> Tái cấu trúc code, giảm duplication khi repo phình to.</li>
-      <li><strong>5. AutoResearch (karpathy/nanoGPT):</strong> Agent tự chạy thí nghiệm &amp; tối ưu code tự động.</li>
-    </ol>
+<!-- CHI TIẾT BẢNG CARDS CHO NHÓM 1 -->
+<div id="repo-group-1" style="background: rgba(0, 242, 254, 0.03); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+    <h3 style="margin: 0; color: #00f2fe; font-size: 1.2rem; font-weight: 800;">🏆 Top 1 Senior Engineer &amp; Agent Skills (Vũ Khí Lập Trình)</h3>
+    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
   </div>
+  <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #cbd5e0;">5 Repo vô địch về quy trình Senior Engineer, Claude Superpowers, Refactoring &amp; AutoML:</p>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+      <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">⭐ 43.1K Stars (Google)</div>
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Quy trình Senior Engineer (Google Chrome Lead)</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ 23 skill Markdown đóng gói quy trình Senior Engineer tại Google cho AI Code Agent (6 bước: Define → Plan → Build → Verify → Review → Ship).</p>
+      <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
+    </div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem;">Nhóm 2: Data, PDF &amp; Web Extraction (3 Repo)</h4>
-    <ol style="padding-left: 1.25rem; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem;" start="6">
-      <li><strong>6. OpenDataLoader PDF:</strong> Bóc tách PDF, bảng biểu, cột phức tạp sang Markdown sạch.</li>
-      <li><strong>7. Firecrawl:</strong> LLM Crawler chuyển đổi website online thành Markdown/API.</li>
-      <li><strong>8. Crawl4AI:</strong> Crawler mã nguồn mở tốc độ cao tối ưu cho AI agents &amp; RAG.</li>
-    </ol>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+      <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">⭐ 204K+ Stars (Top 1)</div>
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Claude Superpowers Framework (obra)</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Skill collection thành công nhất hệ sinh thái. Biến Claude Code thành Engineering Partner chuyên nghiệp (Brainstorming → Planning → TDD → Review).</p>
+      <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
+    </div>
+
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+      <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">Top 1 Test Harness</div>
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Harness &amp; Testing Environment (Chachamarul27)</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ khung kiểm thử tự động &amp; mô phỏng môi trường (Harness Environment) tối ưu riêng cho Claude Code CLI.</p>
+      <a href="https://github.com/Chachamarul27/claude-code-harness" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
+    </div>
+
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+      <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">Top 1 Refactoring</div>
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 Code Refactoring AI System (refactoringhq)</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Công cụ tự động hóa tái cấu trúc mã nguồn (Tolaria) thông minh dành cho các dự án phần mềm lớn.</p>
+      <a href="https://github.com/refactoringhq/tolaria" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
+    </div>
+
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 8px; padding: 1rem;">
+      <div style="font-size: 0.75rem; color: #00f2fe; font-weight: 700; margin-bottom: 4px;">Top 1 AutoML Research</div>
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1rem;">🥇 AutoResearch AutoML Agent (Andrej Karpathy)</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Chỉ 630 dòng Python: Agent tự nâng cấp code training, tự chạy ~100 thí nghiệm qua đêm trên 1 GPU.</p>
+      <a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.75rem; color: #00f2fe; font-weight: 700; font-size: 0.85rem; text-decoration: none;">Truy cập Repo Vô Địch ↗</a>
+    </div>
   </div>
+</div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem;">Nhóm 3: Design Intelligence &amp; Utilities (4 Repo)</h4>
-    <ol style="padding-left: 1.25rem; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem;" start="9">
-      <li><strong>9. UI/UX Pro Max Skill:</strong> Design director AI tạo visual hierarchy &amp; gu thẩm mỹ tốt.</li>
-      <li><strong>10. PPT Master Generator:</strong> Tự động tạo slide bài thuyết trình từ cấu trúc ý tưởng.</li>
-      <li><strong>11. Recordly Screen Recorder:</strong> Quay màn hình làm video reference cho AI phân tích UI.</li>
-      <li><strong>12. MengTo/Skills:</strong> Thư viện skill phong phú cho web design, Tailwind, GSAP &amp; 3D.</li>
-    </ol>
+<!-- CHI TIẾT BẢNG CARDS CHO NHÓM 2 -->
+<div id="repo-group-2" style="background: rgba(56, 161, 105, 0.03); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+    <h3 style="margin: 0; color: #48bb78; font-size: 1.2rem; font-weight: 800;">🌐 Top 1 PDF &amp; Web Extraction (Dữ Liệu &amp; RAG Pipeline)</h3>
+    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
   </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 OpenDataLoader PDF Parser</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Công cụ bóc tách file PDF, bảng biểu phức tạp và văn bản dạng cột thành định dạng Markdown chuẩn cho LLM.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Firecrawl LLM Web Crawler</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Crawler chuyển đổi bất kỳ URL website nào thành Markdown sạch sẽ cho AI Agent đọc ngữ cảnh.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 161, 105, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Crawl4AI Speed Crawler</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Crawler mã nguồn mở tốc độ cao tối ưu riêng cho RAG pipeline và AI Coding Agents.</p>
+    </div>
+  </div>
+</div>
 
-  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px;">
-    <h4 style="color: var(--accent); margin-bottom: 0.75rem;">Nhóm 4: Cybersecurity &amp; Ship Safety (6 Repo)</h4>
-    <ol style="padding-left: 1.25rem; margin: 0; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.5rem;" start="13">
-      <li><strong>13. Z4nzu Hackingtool:</strong> Công cụ kiểm thử bảo mật &amp; pentesting tổng hợp.</li>
-      <li><strong>14. PentesterFlow:</strong> CLI AI agent hỗ trợ pentest workflow &amp; quét lỗ hổng.</li>
-      <li><strong>15. 212 Red Team Skills:</strong> Bộ kỹ năng Red Team cho AI Agents.</li>
-      <li><strong>16. GhidraGPT:</strong> Plugin hỗ trợ reverse engineering với LLM.</li>
-      <li><strong>17. dockerscan:</strong> Kiểm tra lỗ hổng &amp; cấu hình Docker image/container.</li>
-      <li><strong>18. Anthropic Cybersecurity Skills &amp; Raccoon Scanner:</strong> Vulnerability scanning bằng Python.</li>
-    </ol>
+<!-- CHI TIẾT BẢNG CARDS CHO NHÓM 3 -->
+<div id="repo-group-3" style="background: rgba(159, 122, 234, 0.03); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+    <h3 style="margin: 0; color: #b794f4; font-size: 1.2rem; font-weight: 800;">🎨 Top 1 UI Design Intelligence &amp; Utilities</h3>
+    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 UI/UX Pro Max Skill</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ kỹ năng đóng vai Design Director giúp AI tư duy visual hierarchy, phối màu HSL và thiết kế sang trọng.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 PPT Master Generator</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Công cụ tự động hóa khởi tạo slide bài thuyết trình bài bản từ outline ý tưởng.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Recordly Screen Recorder</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Quay video màn hình chất lượng cao để làm tài liệu reference cho AI phân tích tương tác.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(159, 122, 234, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 MengTo/Skills Repository</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Kho skill thiết kế giao diện web, Tailwind CSS, GSAP animation và 3D WebGL cực kỳ ấn tượng.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CHI TIẾT BẢNG CARDS CHO NHÓM 4 -->
+<div id="repo-group-4" style="background: rgba(229, 62, 62, 0.03); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; scroll-margin-top: 80px;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+    <h3 style="margin: 0; color: #f56565; font-size: 1.2rem; font-weight: 800;">🛡️ Bộ Bảo Mật Chuyên Sâu (7 Security Tools)</h3>
+    <a href="#repo-banner-tabs" style="color: #a0aec0; font-size: 0.85rem; text-decoration: none; background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; border: 1px solid var(--border);">⬆️ Quay về Tab Banner</a>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="margin: 0 0 0.5rem 0; color: #fff;">🥇 Z4nzu Hackingtool</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ công cụ rà soát an ninh mạng và kiểm thử xâm nhập tổng hợp.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="color: #fff; margin: 0 0 0.5rem 0;">🥇 PentesterFlow CLI Agent</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Agent dòng lệnh tự động kiểm tra lỗ hổng bảo mật phổ biến trước khi ship.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="color: #fff; margin: 0 0 0.5rem 0;">🥇 212 Red Team Skills</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Bộ kỹ năng Red Team tấn công thử nghiệm dành cho AI Agents.</p>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(229, 62, 62, 0.2); border-radius: 8px; padding: 1rem;">
+      <h4 style="color: #fff; margin: 0 0 0.5rem 0;">🥇 GhidraGPT &amp; Dockerscan</h4>
+      <p style="margin: 0; font-size: 0.85rem; color: #a0aec0;">Plugin reverse engineering và rà soát an toàn cho Docker Container.</p>
+    </div>
   </div>
 </div>
 
 <!-- KHU VỰC 29 REPO DỰ PHÒNG -->
-<h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 2rem; color: #ed8936;">📦 Kho Lưu Trữ Dự Phòng (29 Repo Mở Rộng)</h3>
-<p class="readerBody_paragraph__yI4m6"><span>Danh sách 29 công cụ &amp; thư viện bổ trợ dự phòng khi dự án phát sinh yêu cầu đặc thù về data, testing, automation hoặc AI agent mở rộng:</span></p>
-
-<div style="background: rgba(237, 137, 54, 0.04); border: 1px solid rgba(237, 137, 54, 0.2); border-radius: 10px; padding: 1.25rem; margin: 1rem 0;">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem; font-size: 0.88rem;">
-    <div>1. <strong>Playwright:</strong> End-to-end testing cho browser agent.</div>
-    <div>2. <strong>Puppeteer:</strong> Automation &amp; screenshot tool.</div>
-    <div>3. <strong>LangChain:</strong> Framework xây dựng LLM applications.</div>
-    <div>4. <strong>LlamaIndex:</strong> RAG &amp; Data indexing framework.</div>
-    <div>5. <strong>AutoGPT:</strong> Autonomous AI agent framework.</div>
-    <div>6. <strong>CrewAI:</strong> Multi-agent orchestration framework.</div>
-    <div>7. <strong>Semantic Kernel:</strong> Microsoft AI integration SDK.</div>
-    <div>8. <strong>Haystack:</strong> Modular RAG &amp; search framework.</div>
-    <div>9. <strong>ChromaDB:</strong> Vector database mã nguồn mở cho AI.</div>
-    <div>10. <strong>Pinecone SDK:</strong> Vector search engine integration.</div>
     <div>11. <strong>Ollama:</strong> Run LLMs locally on device.</div>
     <div>12. <strong>vLLM:</strong> High-throughput LLM serving engine.</div>
     <div>13. <strong>LiteLLM:</strong> Unified I/O proxy cho 100+ LLM APIs.</div>
