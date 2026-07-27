@@ -39,6 +39,33 @@
           grid.classList.toggle('reader_gridCollapsed__4Vxmv');
         }
       }
+
+      // VI/EN Language Toggle
+      var enBtn = e.target.closest('.LangToggle_en__Ld3Yf');
+      if (enBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Show toast notification
+        var existing = document.getElementById('lang-toast');
+        if (existing) existing.remove();
+        var toast = document.createElement('div');
+        toast.id = 'lang-toast';
+        toast.textContent = '🌐 English version is coming soon!';
+        toast.style.cssText = 'position:fixed;top:80px;right:20px;z-index:9999;background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#00f2fe;padding:14px 24px;border-radius:10px;font-size:0.95rem;font-weight:600;border:1px solid rgba(0,242,254,0.3);box-shadow:0 8px 32px rgba(0,0,0,0.4);animation:toastIn 0.4s ease;';
+        document.body.appendChild(toast);
+        // Add animation keyframes if not exist
+        if (!document.getElementById('toast-keyframes')) {
+          var style = document.createElement('style');
+          style.id = 'toast-keyframes';
+          style.textContent = '@keyframes toastIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}} @keyframes toastOut{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(40px)}}';
+          document.head.appendChild(style);
+        }
+        setTimeout(function() {
+          toast.style.animation = 'toastOut 0.4s ease forwards';
+          setTimeout(function() { toast.remove(); }, 400);
+        }, 3000);
+        return false;
+      }
     }, true);
   })();
 </script>
