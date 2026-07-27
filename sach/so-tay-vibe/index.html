@@ -305,6 +305,128 @@
 
 <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
 
+<h2 class="readerBody_subhead__fsVE_" id="prompt-mau-copy">📋 6. Prompt Mẫu Có Thể Copy</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Dưới đây là bộ Prompt Mẫu chi tiết được tối ưu sẵn. Bạn có thể sao chép trực tiếp để giao việc cho AI Coding Agent trong từng giai đoạn dự án:</span></p>
+
+<div style="display: flex; flex-direction: column; gap: 1.25rem; margin: 1.5rem 0;">
+
+  <div style="background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.3); border-radius: 8px; padding: 1.25rem;">
+    <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🔥 Master Prompt Cho Dự Án Mới</h3>
+    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Tôi muốn làm dự án này theo quy trình vibe coding senior.
+
+Hãy làm theo thứ tự:
+1. Đọc context/reference.
+2. Tạo PRODUCT_SPEC.md.
+3. Tạo IMPLEMENTATION_PLAN.md theo milestone nhỏ.
+4. Tạo DESIGN_SYSTEM.md dựa trên MengTo/Skills phù hợp.
+5. Build từng milestone, mỗi milestone phải chạy được.
+6. Sau mỗi milestone, verify bằng build/test/browser.
+7. Khi code phình to, refactor module nhỏ.
+8. Trước khi ship, audit security và UX.
+
+Không làm quá rộng. Ưu tiên bản chạy được, đẹp, dễ sửa, rồi polish dần.</pre>
+  </div>
+
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">📄 Prompt Tạo Spec</h3>
+    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Đọc toàn bộ context. Tóm tắt:
+1. Mục tiêu sản phẩm
+2. User chính
+3. Tính năng bắt buộc
+4. Style/UI reference
+5. Rủi ro kỹ thuật
+6. Phần còn thiếu cần hỏi lại
+
+Sau đó tạo PRODUCT_SPEC.md. Chưa code.</pre>
+  </div>
+
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🗺️ Prompt Tạo Plan</h3>
+    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Bạn là Senior Lead Engineer.
+Dựa trên PRODUCT_SPEC.md, lập IMPLEMENTATION_PLAN.md.
+Chia thành milestone nhỏ có thể chạy được.
+Mỗi milestone cần có output, file chính cần sửa, cách verify và rủi ro.
+Chưa code cho đến khi plan rõ.</pre>
+  </div>
+
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🎨 Prompt Tạo Design System</h3>
+    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Áp dụng tinh thần MengTo/Skills cho UI/web-design.
+Tạo DESIGN_SYSTEM.md và CSS tokens gồm:
+- màu chủ đạo và màu phụ
+- typography scale
+- spacing scale
+- radius
+- shadow
+- button/input/card states
+- responsive rules
+- motion rules
+
+Tránh UI xám mặc định. Ưu tiên hierarchy rõ, đọc dễ, đẹp và dùng được.</pre>
+  </div>
+
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">🛡️ Prompt Audit Trước Khi Ship</h3>
+    <pre style="background: rgba(0, 0, 0, 0.4); padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; white-space: pre-wrap; word-break: break-word; color: var(--foreground); margin: 0;">Audit dự án trước khi ship.
+Tập trung vào:
+- lỗi runtime/build
+- responsive và text overlap
+- accessibility cơ bản
+- duplicate code và component quá lớn
+- secret leak
+- XSS hoặc unsafe user input
+- dependency/security risk
+
+Phân loại P0/P1/P2. Sửa P0 và P1 trước.</pre>
+  </div>
+
+</div>
+
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+
+<h2 class="readerBody_subhead__fsVE_" id="checklist-truoc-khi-ship">✅ 7. Checklist Trước Khi Ship</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Danh sách kiểm tra bắt buộc phải rà soát qua 4 góc độ trước khi triển khai công khai:</span></p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">📦 Product</h4>
+    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+      <li>Luồng chính dùng được từ đầu tới cuối.</li>
+      <li>CTA, form, navigation và trạng thái lỗi rõ ràng.</li>
+      <li>Không còn placeholder gây hiểu nhầm.</li>
+    </ul>
+  </div>
+
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">🎨 UI/UX</h4>
+    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+      <li>Desktop và mobile không vỡ layout.</li>
+      <li>Text không tràn, không chồng lên nhau.</li>
+      <li>Motion có ích, không làm trang nặng.</li>
+    </ul>
+  </div>
+
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">💻 Code</h4>
+    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+      <li>Build production thành công.</li>
+      <li>Component lớn đã được tách hợp lý.</li>
+      <li>Không có console error quan trọng.</li>
+    </ul>
+  </div>
+
+  <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem;">
+    <h4 style="color: var(--accent); margin-bottom: 0.75rem; font-size: 1.05rem;">🔒 Security</h4>
+    <ul style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+      <li>Không leak API key hoặc file .env.</li>
+      <li>Input được validate.</li>
+      <li>Không render HTML user nhập một cách unsafe.</li>
+    </ul>
+  </div>
+</div>
+
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+
 <h2 class="readerBody_subhead__fsVE_" id="loi-thuong-gap">⚠️ Lỗi Thường Gặp Khi Vibe Coding</h2>
 <ul style="padding-left: 1.25rem; margin: 1rem 0; display: flex; flex-direction: column; gap: 0.5rem; color: #ff6b6b;">
   <li>❌ Bắt đầu bằng "làm app này cho tôi" nhưng không có spec.</li>
