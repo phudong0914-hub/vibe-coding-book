@@ -366,8 +366,8 @@
     "chuong-15": "vfkONi5o6KE",
     "chuong-16": "RmHw41y3dXE",
     "chuong-17": "bHMbxd53Zfg",
-    "chuong-18": "",
-    "chuong-19": ""
+    "chuong-18": "22r1HDRbBko",
+    "chuong-19": "Khube4-IWag"
   };
 
   function getVideosJsonUrl() {
