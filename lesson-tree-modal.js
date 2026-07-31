@@ -348,7 +348,7 @@
 
   // Video Integration Manager (NotebookLM Podcast Playlist)
   const YOUTUBE_VIDEOS = {
-    "loi-mo-dau": "",
+    "loi-mo-dau": "JsTENEECoOw",
     "chuong-1": "",
     "chuong-2": "",
     "chuong-3": "",
