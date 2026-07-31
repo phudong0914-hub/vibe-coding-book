@@ -346,15 +346,175 @@
     }
   }
 
+  // Video Integration Manager (NotebookLM Podcast Playlist)
+  const YOUTUBE_VIDEOS = {
+    "loi-mo-dau": "",
+    "chuong-1": "",
+    "chuong-2": "",
+    "chuong-3": "",
+    "chuong-4": "",
+    "chuong-5": "",
+    "chuong-6": "",
+    "chuong-7": "",
+    "chuong-8": "",
+    "chuong-9": "",
+    "chuong-10": "",
+    "chuong-11": "",
+    "chuong-12": "",
+    "chuong-13": "",
+    "chuong-14": "",
+    "chuong-15": "",
+    "chuong-16": "",
+    "chuong-17": "",
+    "chuong-18": "",
+    "chuong-19": ""
+  };
+
+  function getVideosJsonUrl() {
+    const loc = window.location.pathname;
+    if (loc.includes('/sach/chuong-') || loc.includes('/sach/loi-mo-dau') || loc.includes('/sach/thuat-ngu') || loc.includes('/sach/nguon-doc-them') || loc.includes('/sach/tai-lieu-tham-khao')) {
+      return '../videos.json';
+    } else if (loc.includes('/sach/')) {
+      return 'videos.json';
+    }
+    return 'sach/videos.json';
+  }
+
+  function initVideoFeatures() {
+    // Try to load videos.json for easy future updates by the user
+    fetch(getVideosJsonUrl())
+      .then(res => res.json())
+      .then(data => {
+        Object.assign(YOUTUBE_VIDEOS, data);
+        runVideoIntegration();
+      })
+      .catch(err => {
+        console.log("Using offline video configuration fallback:", err);
+        runVideoIntegration();
+      });
+  }
+
+  function runVideoIntegration() {
+    const loc = window.location.pathname;
+    
+    // 1. Chapter Page Video Injection
+    let chapterKey = null;
+    if (loc.includes('/loi-mo-dau')) {
+      chapterKey = 'loi-mo-dau';
+    } else {
+      const match = loc.match(/\/chuong-(\d+)/);
+      if (match) chapterKey = 'chuong-' + match[1];
+    }
+
+    if (chapterKey && YOUTUBE_VIDEOS[chapterKey]) {
+      const youtubeId = YOUTUBE_VIDEOS[chapterKey];
+      const insertAnchor = document.querySelector('.readerBody_readingTime__KY4Lh') || document.querySelector('.readerBody_title__IEeSs');
+      if (insertAnchor && !document.querySelector('.vibe-video-player-container')) {
+        const playerContainer = document.createElement('div');
+        playerContainer.className = 'vibe-video-player-container';
+        playerContainer.id = 'vibeChapterVideoPlayer';
+        playerContainer.innerHTML = `
+          <div class="vibe-video-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #ff6200;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>Video tóm tắt chương (NotebookLM AI Podcast):</span>
+          </div>
+          <div class="vibe-video-ratio-wrapper">
+            <iframe src="https://www.youtube.com/embed/${youtubeId}?autoplay=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        `;
+        insertAnchor.parentNode.insertBefore(playerContainer, insertAnchor.nextSibling);
+
+        // Auto-scroll and highlight if user came from the index video gallery (?play=1)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('play') === '1') {
+          setTimeout(() => {
+            playerContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            playerContainer.classList.add('vibe-video-highlight');
+            const iframe = playerContainer.querySelector('iframe');
+            if (iframe) iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+          }, 600);
+        }
+      }
+    }
+
+    // 2. Index Page Video Gallery Grid/Slider Injection
+    const tocHeading = document.getElementById('toc-title') || document.querySelector('.TocSection_heading__7f6YX');
+    if (tocHeading && !document.querySelector('.vibe-video-gallery')) {
+      const activeChapters = [];
+      modulesData.forEach(mod => {
+        mod.lessons.forEach(les => {
+          let cKey = null;
+          if (les.url.includes('/loi-mo-dau')) {
+            cKey = 'loi-mo-dau';
+          } else {
+            const m = les.url.match(/\/chuong-(\d+)/);
+            if (m) cKey = 'chuong-' + m[1];
+          }
+          if (cKey && YOUTUBE_VIDEOS[cKey]) {
+            activeChapters.push({
+              key: cKey,
+              title: les.title,
+              url: les.url,
+              part: mod.tag,
+              youtubeId: YOUTUBE_VIDEOS[cKey]
+            });
+          }
+        });
+      });
+
+      if (activeChapters.length > 0) {
+        const galleryContainer = document.createElement('div');
+        galleryContainer.className = 'vibe-video-gallery';
+        
+        let cardsHtml = '';
+        activeChapters.forEach(chap => {
+          let targetUrl = chap.url;
+          if (loc.includes('/sach/')) {
+            targetUrl = targetUrl.replace('sach/', '');
+          }
+          targetUrl += '?play=1';
+
+          cardsHtml += `
+            <a href="${targetUrl}" class="vibe-video-gallery-card">
+              <div>
+                <div class="vibe-video-card-tag">${chap.part}</div>
+                <h4 class="vibe-video-card-title">${chap.title}</h4>
+              </div>
+              <div class="vibe-video-card-footer">
+                <span>Xem tóm tắt AI &rarr;</span>
+                <div class="vibe-video-play-btn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </a>
+          `;
+        });
+
+        galleryContainer.innerHTML = `
+          <h3 class="vibe-video-gallery-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffc800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+            <span>Thư Viện Video Bài Giảng NotebookLM</span>
+          </h3>
+          <div class="vibe-video-gallery-scroll">
+            ${cardsHtml}
+          </div>
+        `;
+        tocHeading.parentNode.insertBefore(galleryContainer, tocHeading);
+      }
+    }
+  }
+
   // Initialize on DOM Ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       buildModalDOM();
       fixReaderLayout();
+      initVideoFeatures();
     });
   } else {
     buildModalDOM();
     fixReaderLayout();
+    initVideoFeatures();
   }
 
   window.addEventListener('resize', fixReaderLayout);
