@@ -350,7 +350,7 @@
   const YOUTUBE_VIDEOS = {
     "loi-mo-dau": "JsTENEECoOw",
     "chuong-1": "SrdJrxH6NcI",
-    "chuong-2": "",
+    "chuong-2": "V_-ak3Av4qY",
     "chuong-3": "",
     "chuong-4": "",
     "chuong-5": "",
