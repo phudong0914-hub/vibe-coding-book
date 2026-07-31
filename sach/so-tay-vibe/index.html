@@ -530,8 +530,513 @@ Phân loại P0/P1/P2. Sửa P0 và P1 trước.</pre>
 
 <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
 
-<!-- PHẦN 7: CHECKLIST TRƯỚC KHI SHIP -->
-<h2 class="readerBody_subhead__fsVE_" id="checklist-truoc-khi-ship">7. Checklist Kiểm Tra Trước Khi Ship</h2>
+<!-- PHẦN 7: 15 GỢI Ý LẬP TRÌNH VIBE CODING -->
+<h2 class="readerBody_subhead__fsVE_" id="vibe-15-prompts">7. 15 Gợi Ý Lập Trình Theo Phong Cách Vibe</h2>
+<p class="readerBody_paragraph__yI4m6"><span>Bộ 15 gợi ý lập trình (prompts) thực chiến được đúc kết để tối ưu hóa sự cộng tác giữa bạn và AI Coding Agents ở mọi giai đoạn phát triển dự án. Công thức chung cực kỳ tinh gọn: <strong>Copy, điền thông tin trong ngoặc vuông [ ], và chạy</strong>. Dưới đây là bảng tổng quan và chi tiết từng prompt mẫu:</span></p>
+
+<!-- TỔNG QUAN 15 PROMPTS -->
+<div class="vibe-table-wrapper">
+  <table class="vibe-table">
+    <thead>
+      <tr>
+        <th style="width: 80px;">Mã số</th>
+        <th style="width: 250px;">Gợi ý (Prompt)</th>
+        <th>Trường hợp sử dụng (Use it when)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">01</td>
+        <td><a href="#prompt-01" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Write a Full PRD</a></td>
+        <td>Trước khi phát triển bất kỳ tính năng mới nào</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">02</td>
+        <td><a href="#prompt-02" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Create Your CLAUDE.md</a></td>
+        <td>Thiết lập dự án mới, phiên làm việc đầu tiên</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">03</td>
+        <td><a href="#prompt-03" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Ultra Plan Mode</a></td>
+        <td>Tác vụ phức tạp ảnh hưởng nhiều file</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">04</td>
+        <td><a href="#prompt-04" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Spec-Driven Development</a></td>
+        <td>Các tính năng quan trọng không được phép sai lệch</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">05</td>
+        <td><a href="#prompt-05" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Full UI & UX Design Brief</a></td>
+        <td>Trước khi thiết kế màn hình hoặc luồng người dùng</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">06</td>
+        <td><a href="#prompt-06" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Implementation Plan</a></td>
+        <td>Sau khi tài liệu đặc tả (Spec) được phê duyệt</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">07</td>
+        <td><a href="#prompt-07" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Wire Up an MCP Server</a></td>
+        <td>Kết nối AI Agent với các công cụ/hệ thống bên ngoài</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">08</td>
+        <td><a href="#prompt-08" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Connect Your Database</a></td>
+        <td>Thiết lập cơ sở dữ liệu (Postgres / Supabase...)</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">09</td>
+        <td><a href="#prompt-09" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Find Security Gaps</a></td>
+        <td>Rà soát bảo mật trước khi deploy lên production</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">10</td>
+        <td><a href="#prompt-10" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Debug an Error Fast</a></td>
+        <td>Ngay khi xuất hiện lỗi/bug trong quá trình phát triển</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">11</td>
+        <td><a href="#prompt-11" style="color: #00f2fe; text-decoration: none; font-weight: 600;">E2E Test Your Application</a></td>
+        <td>Đảm bảo an toàn cho các luồng giao dịch/dòng tiền</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">12</td>
+        <td><a href="#prompt-12" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Clean Up Dead Code</a></td>
+        <td>Khi kho mã nguồn bắt đầu nặng nề và dư thừa</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">13</td>
+        <td><a href="#prompt-13" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Write Clean Git Commits</a></td>
+        <td>Mỗi lần commit code lên Git repository</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">14</td>
+        <td><a href="#prompt-14" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Hooks as Guardrails</a></td>
+        <td>Tự động hóa kiểm soát chất lượng bằng các script</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#00f2fe;">15</td>
+        <td><a href="#prompt-15" style="color: #00f2fe; text-decoration: none; font-weight: 600;">Turn a Task Into a Skill</a></td>
+        <td>Khi một tác vụ lặp lại từ 3 lần trở lên</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CHI TIẾT 15 PROMPTS CARDS -->
+<div class="vibe-copy-card-container" style="display:flex; flex-direction:column; gap:1.25rem; margin:1.5rem 0;">
+
+  <div class="vibe-copy-card" id="prompt-01">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">01 -- Write a Full PRD</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Write a complete PRD for the feature below.
+
+Feature: [DESCRIBE FEATURE]
+Users: [WHO USES IT]
+Stack: [YOUR STACK]
+
+Include:
+
+* Problem statement + success metrics
+* User stories with acceptance criteria
+* Scope: what ships in v1, what does not
+* Data model changes
+* Edge cases + failure states
+* Open questions for me to answer
+
+Keep it under 2 pages. Be specific, no filler.
+Save it as docs/prd-[feature].md so every later
+prompt can reference it.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-02">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">02 -- Create Your CLAUDE.md</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Scan this entire codebase, then generate a CLAUDE.md.
+
+Include:
+
+* What this project is, in 2 lines
+* Tech stack + the versions that matter
+* Commands: [DEV / BUILD / TEST / LINT]
+* Architecture: where things live and why
+* Code conventions you actually detect in the code
+* Hard rules: [YOUR NON-NEGOTIABLES] -- what to
+  never touch without asking
+* Gotchas a new engineer would hit in week 1
+
+Write rules as short imperatives. Nothing generic --
+only what is true for THIS repo. If you are unsure
+about a rule, ask me instead of inventing it.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-03">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">03 -- Ultra Plan Mode</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Enter plan mode. Do NOT write any code yet.
+
+Task: [PASTE TASK]
+Constraints: [DEADLINE / STACK / NO-GO ZONES]
+
+1. Read every file this task touches, list them
+   with one line on what each does today
+2. Map current behavior vs target behavior
+3. Propose 2-3 approaches with real tradeoffs:
+   complexity, risk, blast radius
+4. Pick one and justify it in 3 lines
+5. Break it into steps small enough to verify
+   one at a time, each with its own check
+6. List risks + the exact rollback for each
+7. Flag anything touching [AUTH / PAYMENTS /
+   PROD DATA] for my explicit sign-off
+
+Then stop. Show me the plan and wait for my
+approval before touching a single file.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-04">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">04 -- Spec-Driven Development</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">We build specs first. Write a spec for: [FEATURE]
+
+Context: [WHO USES IT + WHY NOW]
+
+Spec format:
+
+* Behavior: given / when / then, every case --
+  happy path, edge cases, failure states
+* API contract: inputs, outputs, error shapes,
+  status codes
+* Data: schema changes + migrations needed
+* UI states: loading, empty, error, success
+* Non-goals: what this spec deliberately skips
+* Acceptance checklist I can verify line by line
+
+After I approve the spec, implement EXACTLY the
+spec. If reality forces a deviation, stop, update
+the spec, get my ok, then continue. The spec is
+the source of truth, not the code.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-05">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">05 -- Full UI & UX Design Brief</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Create a full UI/UX design brief for: [SCREEN OR FLOW]
+
+Audience: [USERS]
+Brand: [COLORS / FONTS / VIBE]
+
+Deliver:
+
+* User journey through the flow, step by step
+* Layout per screen: hierarchy, spacing, breakpoints
+* Component inventory with every state --
+  hover, empty, error, loading
+* Typography + color tokens
+* Motion: what animates, duration, easing
+* Accessibility notes
+
+Study patterns from [2-3 PRODUCTS YOU ADMIRE]
+for direction. Never copy them.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-06">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">06 -- Implementation Plan</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Create an implementation plan for: [APPROVED
+SPEC / PRD]
+
+Rules:
+
+* Sequence steps so the app compiles and runs
+  after EVERY single step
+* Each step: files touched, what changes,
+  how I verify it works
+* Flag steps needing a migration or new dependency
+* Put the riskiest unknowns first
+* Size each step: [S / M / L]
+
+Output a numbered build sequence I can run one
+step at a time. Wait for my "go" between steps.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-07">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">07 -- Wire Up an MCP Server</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Wire up an MCP server for: [SERVICE / API]
+
+What I need it to do: [JOBS TO BE DONE]
+
+1. Check for an official or well-maintained
+   existing server first -- name your source
+2. If one exists: exact install command + the
+   .mcp.json config, scoped to this project
+3. If not: scaffold one with the MCP SDK --
+   tools, auth, error handling, typed responses
+4. Add ONLY the tools I will actually use: [LIST]
+5. Wire secrets through [ENV VARS], never
+   hardcode keys in the config file
+6. Verify the connection and call one tool
+   end to end, show me the output
+7. Document each tool in 1 line so future
+   sessions know when to reach for it</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-08">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">08 -- Connect Your Database</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Connect this app to [POSTGRES / SUPABASE / YOUR DB].
+
+* Pick the client that fits this stack,
+  justify it in 1 line
+* Env vars: name them, add to .env.example,
+  never commit real values
+* Schema: tables for [ENTITIES] with types,
+  relations, and indexes for [HOT QUERIES]
+* Create + run the migrations, and show me
+  the rollback for each one
+* One typed query helper per table -- no raw
+  SQL scattered through components
+* Access rules / row-level security if this
+  is [MULTI-TENANT]
+* Connection pooling if we are serverless
+
+Then prove it: seed one row, read it back,
+show me the output.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-09">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">09 -- Find Security Gaps</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Audit this codebase for security gaps.
+Attack it like you want in.
+
+Focus areas: [AUTH / PAYMENTS / USER DATA]
+
+Check:
+
+* Secrets in code, config, or git history
+* Injection: SQL, XSS, command, path traversal
+* Auth: routes missing checks, weak sessions,
+  broken redirects
+* IDOR: can user A read user B's data?
+* File uploads + input validation on every form
+* Dependency CVEs -- run the audit, read it
+* Rate limiting on [EXPENSIVE ENDPOINTS]
+* What leaks through error messages and logs
+
+Rank findings by severity with exact file:line,
+fix the critical ones now, and list the rest
+as tickets with effort estimates.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-10">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">10 -- Debug an Error Fast</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Debug this error. Do NOT guess.
+
+Error: [PASTE FULL ERROR + STACK TRACE]
+When it happens: [STEPS TO REPRODUCE]
+
+1. Read the stack trace, open the exact files
+   involved
+2. State expected vs actual behavior in 1 line
+3. List 3 hypotheses, ranked by likelihood
+4. Prove or kill each one with logs or a tiny
+   test -- evidence, not vibes
+5. Fix the root cause, not the symptom
+6. Search the repo for the same pattern -- if
+   it can break here, it breaks elsewhere
+7. Add a regression test that fails without
+   the fix
+8. Tell me in 2 lines why it broke and why it
+   can never break this way again</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-11">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">11 -- E2E Test Your Application</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Write Playwright E2E tests for: [FLOW]
+
+Stack: [YOUR STACK] CI: [GITHUB ACTIONS / OTHER]
+
+* Money paths first: [SIGNUP / CHECKOUT /
+  CORE ACTION]
+* Test what the user sees, not implementation
+  details
+* Selectors: roles and labels, never brittle
+  CSS chains
+* One unhappy path per flow: bad input,
+  network failure, expired session
+* Tests stay independent -- any order, zero
+  shared state, each seeds its own data
+* Headless in CI, headed locally for debugging
+* Screenshots + traces on failure only
+
+Run the suite, show me the results, fix what
+fails, and tell me what the suite still does
+NOT cover.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-12">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">12 -- Clean Up Dead Code</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Find and delete dead code in this repo.
+
+Scope: [WHOLE REPO / SPECIFIC FOLDER]
+
+* Unused exports, components, hooks, utils
+* Unreachable branches + commented-out blocks
+* package.json dependencies nothing imports
+* Stale feature flags stuck always-on or
+  always-off
+* Duplicate logic that should merge into one
+* Dead CSS classes and unused assets
+
+Verify with a search before EVERY deletion --
+dynamic imports and string references count.
+Delete in small commits, run [BUILD + TESTS]
+after each one, and report total lines removed
+plus anything you were not 100% sure about.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-13">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">13 -- Write Clean Git Commits</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Commit my staged changes properly.
+
+Convention: [CONVENTIONAL COMMITS / YOUR FORMAT]
+
+* Split unrelated changes into separate commits
+* Format: type(scope): what changed and why
+  feat / fix / refactor / chore / docs / test
+* Subject under 50 chars, imperative mood
+* Body explains the WHY, wrapped at 72
+* Reference the ticket: [TICKET-ID]
+* Never mix a refactor with a behavior change
+  in one commit
+* Never commit [SECRETS / .ENV / GENERATED
+  FILES]
+
+Show me the plan -- files per commit + messages --
+before you commit anything. Then commit one at
+a time so I can stop you between them.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-14">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">14 -- Hooks as Guardrails</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Set up Claude Code hooks as guardrails here.
+
+Stack: [YOUR STACK + PACKAGE MANAGER]
+
+* PostToolUse: run [LINT + TYPECHECK] after
+  every file edit, feed errors straight back
+* PreToolUse: block edits to [PROTECTED PATHS:
+  MIGRATIONS, .ENV, PROD CONFIG]
+* Stop: run [TEST SUITE] before a session ends
+* Notification: ping me with [SOUND / SLACK]
+  when my input is needed
+
+Write the hook scripts + the settings.json
+entries. Keep each script under 20 lines and
+exit non-zero with a clear message so the
+agent knows exactly what to fix. Then trigger
+each hook on purpose and show me it firing.</pre>
+  </div>
+
+  <div class="vibe-copy-card" id="prompt-15">
+    <div class="vibe-copy-header">
+      <span class="vibe-copy-title">15 -- Turn a Task Into a Skill</span>
+      <button class="vibe-copy-btn" type="button">Copy Prompt</button>
+    </div>
+    <pre class="vibe-code-block">Turn this repetitive task into a Claude Code skill.
+
+The task I keep doing: [DESCRIBE TASK + STEPS]
+
+* Create .claude/skills/[NAME]/SKILL.md
+* Frontmatter: name + description with the exact
+  trigger phrases I actually say
+* Body: numbered workflow, my conventions,
+  edge cases
+* What it should ask me for vs infer on its own
+* What "done" looks like
+
+Then dry-run the skill on a real example and
+refine until the output matches how I do it
+by hand.</pre>
+  </div>
+
+</div>
+
+<!-- TÀI NGUYÊN & CỘNG ĐỒNG BANNER -->
+<div class="vibe-banner" style="margin-top: 2rem; border: 1px solid rgba(0, 242, 254, 0.4);">
+  <h3 style="color:#fff; margin-top:0; margin-bottom: 0.5rem; font-size:1.25rem;">🚨 NEW CLAUDE CODE + N8N AUTOMATION BOOTCAMP — LIVE NOW 🚨</h3>
+  <p style="color:#00f2fe; font-weight:700; margin: 4px 0 16px 0;">🚀 Save 10-20 hours every week with AI Workflows inside, or your money back.</p>
+  <a href="https://innercircle.community" target="_blank" rel="noopener" class="vibe-badge-pill vibe-badge-pill-cyan" style="margin-bottom: 1.5rem; text-decoration: none;">👉 Join the Club: AI Inner Circle Community 👈</a>
+  
+  <div class="vibe-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: left;">
+    <div>
+      <h4 style="color:#fff; margin:0 0 0.5rem 0; font-size: 0.95rem;">Follow Manthan</h4>
+      <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; font-size:0.85rem;">
+        <li>📸 <strong>Instagram:</strong> <a href="https://instagram.com/leadgenman" target="_blank" style="color:#00f2fe; text-decoration:none;">@leadgenman</a></li>
+        <li>📺 <strong>YouTube:</strong> <a href="https://youtube.com/LeadGenMan" target="_blank" style="color:#00f2fe; text-decoration:none;">LeadGenMan</a></li>
+        <li>🎵 <strong>TikTok:</strong> <a href="https://tiktok.com/@leadgenmanthan" target="_blank" style="color:#00f2fe; text-decoration:none;">@leadgenmanthan</a></li>
+        <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/leadgenmanthan" target="_blank" style="color:#00f2fe; text-decoration:none;">leadgenmanthan</a></li>
+        <li>👥 <strong>Facebook:</strong> <a href="https://facebook.com/LeadGenMan" target="_blank" style="color:#00f2fe; text-decoration:none;">Lead Gen Man</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#fff; margin:0 0 0.5rem 0; font-size: 0.95rem;">Products by Manthan</h4>
+      <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; font-size:0.85rem;">
+        <li>🎬 <strong>TiltIt (3D Tool):</strong> <a href="https://tiltit.video" target="_blank" style="color:#00f2fe; text-decoration:none;">tiltit.video</a></li>
+        <li>✏️ <strong>PenAnywhere (Annotator):</strong> <a href="https://penanywhere.com" target="_blank" style="color:#00f2fe; text-decoration:none;">penanywhere.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="color:#fff; margin:0 0 0.5rem 0; font-size: 0.95rem;">Bootcamps & Courses</h4>
+      <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; font-size:0.85rem;">
+        <li>🤖 <a href="https://udemy.com" target="_blank" style="color:#00f2fe; text-decoration:none; font-weight:600;">Master n8n AI Agents ↗</a></li>
+        <li>🗣️ <a href="https://udemy.com" target="_blank" style="color:#00f2fe; text-decoration:none; font-weight:600;">AI Voice Agent Course ↗</a></li>
+        <li>✉️ <a href="https://udemy.com" target="_blank" style="color:#00f2fe; text-decoration:none; font-weight:600;">Cold Email MasterCourse ↗</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
+
+<!-- PHẦN 8: CHECKLIST TRƯỚC KHI SHIP -->
+<h2 class="readerBody_subhead__fsVE_" id="checklist-truoc-khi-ship">8. Checklist Kiểm Tra Trước Khi Ship</h2>
 <p class="readerBody_paragraph__yI4m6"><span>Bảng kiểm tra 4 khía cạnh tiêu chuẩn sản phẩm trước khi đưa ra người dùng thật:</span></p>
 
 <div class="vibe-checklist-group">
@@ -574,8 +1079,8 @@ Phân loại P0/P1/P2. Sửa P0 và P1 trước.</pre>
 
 <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
 
-<!-- PHẦN 8: LỖI THƯỜNG GẶP & BÀI HỌC -->
-<h2 class="readerBody_subhead__fsVE_" id="loi-thuong-gap">8. Lỗi Thường Gặp &amp; Bài Học Thực Chiến</h2>
+<!-- PHẦN 9: LỖI THƯỜNG GẶP & BÀI HỌC -->
+<h2 class="readerBody_subhead__fsVE_" id="loi-thuong-gap">9. Lỗi Thường Gặp &amp; Bài Học Thực Chiến</h2>
 <p class="readerBody_paragraph__yI4m6"><span>Những bẫy phổ biến làm dự án vibe coding bị thất bại hoặc mất thời gian debug:</span></p>
 
 <ul style="padding-left: 1.25rem; margin: 1rem 0; display: flex; flex-direction: column; gap: 0.6rem; color: #ff6b6b;">
@@ -590,12 +1095,12 @@ Phân loại P0/P1/P2. Sửa P0 và P1 trước.</pre>
 
 <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);"/>
 
-<!-- PHẦN 9: KẾT LUẬN & ĐỊNH HƯỚNG VẬN HÀNH -->
-<h2 class="readerBody_subhead__fsVE_" id="ket-luan">9. Kết Luận &amp; Định Hướng Vận Hành</h2>
+<!-- PHẦN 10: KẾT LUẬN & ĐỊNH HƯỚNG VẬN HÀNH -->
+<h2 class="readerBody_subhead__fsVE_" id="ket-luan">10. Kết Luận &amp; Định Hướng Vận Hành</h2>
 <p class="readerBody_paragraph__yI4m6"><span>Vibe coding hiệu quả không phải là để AI làm mọi thứ một phát rồi hy vọng kết quả đúng. Cách làm tốt hơn là để AI chạy nhanh trong một quy trình rõ ràng: context sạch, spec rõ, plan nhỏ, design system tốt, build từng milestone, verify liên tục, refactor đúng lúc và audit trước khi ship.</span></p>
 <p class="readerBody_paragraph__yI4m6"><span>Khi đó, bạn không chỉ "chat với AI để code", mà đang vận hành một quy trình sản xuất phần mềm nhẹ, nhanh và có khả năng lặp lại. AI là người tăng tốc. Bạn là người giữ mục tiêu, chất lượng và gu sản phẩm.</span></p>
 
-</article></div><aside class="reader_rail__JAVbC"><div><div class="reader_railLabel__uZjKT">TIẾN ĐỘ ĐỌC</div><div aria-hidden="true" class="reader_railTrack__pjfm0"><div class="reader_railFill__pNZTF" style="width:0%"></div></div><div aria-hidden="true" class="reader_railPercent__rfRCH">0%</div><nav aria-label="Trong sổ tay này"><div class="reader_railLabel__uZjKT reader_railHeading__AGcCd">TRONG SỔ TAY NÀY</div><ul class="reader_railSections__uLJ_a"><li><a class="reader_railSection__fR9f4" href="#tong-quan">1. Tổng Quan &amp; Nguyên Tắc Cốt Lõi</a></li><li><a class="reader_railSection__fR9f4" href="#quy-trinh-7-buoc">2. Quy Trình 7 Bước Chuẩn Senior</a></li><li><a class="reader_railSection__fR9f4" href="#mengto-skills">3. Cách Áp Dụng MengTo/Skills</a></li><li><a class="reader_railSection__fR9f4" href="#kho-ma-nguon-open-source">4. Kho Mã Nguồn Mở Tinh Nhuệ</a></li><li><a class="reader_railSection__fR9f4" href="#cheatsheet-table">5. Cheat Sheet Prompt Nhanh</a></li><li><a class="reader_railSection__fR9f4" href="#prompt-mau-copy">6. Prompt Mẫu Chi Tiết</a></li><li><a class="reader_railSection__fR9f4" href="#checklist-truoc-khi-ship">7. Checklist Kiểm Tra</a></li><li><a class="reader_railSection__fR9f4" href="#loi-thuong-gap">8. Lỗi Thường Gặp &amp; Bài Học</a></li><li><a class="reader_railSection__fR9f4" href="#ket-luan">9. Kết Luận &amp; Định Hướng</a></li></ul></nav></div></aside></div></main>
+</article></div><aside class="reader_rail__JAVbC"><div><div class="reader_railLabel__uZjKT">TIẾN ĐỘ ĐỌC</div><div aria-hidden="true" class="reader_railTrack__pjfm0"><div class="reader_railFill__pNZTF" style="width:0%"></div></div><div aria-hidden="true" class="reader_railPercent__rfRCH">0%</div><nav aria-label="Trong sổ tay này"><div class="reader_railLabel__uZjKT reader_railHeading__AGcCd">TRONG SỔ TAY NÀY</div><ul class="reader_railSections__uLJ_a"><li><a class="reader_railSection__fR9f4" href="#tong-quan">1. Tổng Quan &amp; Nguyên Tắc Cốt Lõi</a></li><li><a class="reader_railSection__fR9f4" href="#quy-trinh-7-buoc">2. Quy Trình 7 Bước Chuẩn Senior</a></li><li><a class="reader_railSection__fR9f4" href="#mengto-skills">3. Cách Áp Dụng MengTo/Skills</a></li><li><a class="reader_railSection__fR9f4" href="#kho-ma-nguon-open-source">4. Kho Mã Nguồn Mở Tinh Nhuệ</a></li><li><a class="reader_railSection__fR9f4" href="#cheatsheet-table">5. Cheat Sheet Prompt Nhanh</a></li><li><a class="reader_railSection__fR9f4" href="#prompt-mau-copy">6. Prompt Mẫu Chi Tiết</a></li><li><a class="reader_railSection__fR9f4" href="#vibe-15-prompts">7. 15 Gợi Ý Lập Trình Vibe</a></li><li><a class="reader_railSection__fR9f4" href="#checklist-truoc-khi-ship">8. Checklist Kiểm Tra</a></li><li><a class="reader_railSection__fR9f4" href="#loi-thuong-gap">9. Lỗi Thường Gặp &amp; Bài Học</a></li><li><a class="reader_railSection__fR9f4" href="#ket-luan">10. Kết Luận &amp; Định Hướng</a></li></ul></nav></div></aside></div></main>
 <script id="so-tay-rail-script">
 (function(){
   // 1. Active section observer for right rail
@@ -635,6 +1140,32 @@ Phân loại P0/P1/P2. Sửa P0 và P1 trước.</pre>
 
   window.addEventListener('scroll', updateReadingProgress, { passive: true });
   updateReadingProgress();
+
+  // 3. Copy to clipboard handler
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.vibe-copy-btn');
+    if (btn) {
+      var card = btn.closest('.vibe-copy-card');
+      var code = card ? card.querySelector('.vibe-code-block') : null;
+      if (code) {
+        navigator.clipboard.writeText(code.textContent).then(function() {
+          var oldText = btn.textContent;
+          btn.textContent = 'Copied! ✓';
+          btn.style.background = '#48bb78';
+          btn.style.borderColor = '#48bb78';
+          btn.style.color = '#fff';
+          setTimeout(function() {
+            btn.textContent = oldText;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+            btn.style.color = '';
+          }, 2000);
+        }).catch(function(err) {
+          console.error('Could not copy text: ', err);
+        });
+      }
+    }
+  });
 })();
 </script>
 
